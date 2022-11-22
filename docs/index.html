@@ -1,1404 +1,1642 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web 网址导航</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+
+
+        :root {
+            --color-body: #f5f5f5;
+            --color-box: #fff;
+            --color-header: rgba(255, 255, 255, .8);
+            --color-text: #000000d9;
+            --color-border: rgba(0, 0, 0, .07);
+        }
+
+
+        .item-link {
+            position: relative;
+            background-color: var(--color-box);
+            line-height: 2em;
+            margin-bottom: 16px;
+            flex: 0 0 20%;
+            font-size: 14px;
+
+        }
+
+        .item-link>img {
+            vertical-align: middle;
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+        }
+
+
+
+        .list {
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+            background-color: #fff;
+            padding: 24px 0;
+            border-radius: 8px;
+        }
+
+        .list+.list {
+            margin-top: 24px;
+        }
+
+        .list h3 {
+            margin: 0;
+            padding: 0 24px;
+        }
+
+        .list-item {
+            padding: 0 24px;
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 900px) {
+            .container {
+                width: 80vw;
+                margin: 0 auto;
+            }
+
+            .item-link {
+                flex: 0 0 25%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <section class="svelte-1kgta4e">
-        <div class="list hidden svelte-1kgta4e">
-            <div class="title-icon svelte-1kgta4e"></div>
-            <div class="hot-box svelte-1kgta4e">
-
-                <a target="_blank" href="https://juejin.cn/" class="item-link svelte-1kgta4e">
+    <section class="container">
+        <div class="list hidden wrap">
+            <h3 class="wrap">常用</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://juejin.cn/" class="item-link wrap">
                     <img data-src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png">
-                    <span class="svelte-1kgta4e">掘金</span>
+
+                    <span class="wrap">掘金</span>
                 </a>
 
-                <a target="_blank" href="https://www.zhihu.com/" class="item-link svelte-1kgta4e"><img
-                        data-src="https://static.zhihu.com/heifetz/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.zhihu.com/" class="item-link wrap">
+                    <img data-src="https://static.zhihu.com/heifetz/favicon.ico" alt="" class="wrap"
                         src="https://static.zhihu.com/heifetz/favicon.ico">
-                    <span class="svelte-1kgta4e">知乎</span>
+
+                    <span class="wrap">知乎</span>
                 </a>
 
-                <a target="_blank" href="https://1loc.dev/" class="item-link svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/d01c693b-1ebb-4209-b13e-4ed5b13b3366.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://1loc.dev/" class="item-link wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/d01c693b-1ebb-4209-b13e-4ed5b13b3366.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/d01c693b-1ebb-4209-b13e-4ed5b13b3366.png">
-                    <span class="svelte-1kgta4e">js 一行代码</span>
+
+                    <span class="wrap">js 一行代码</span>
                 </a>
 
-                <a target="_blank" href="https://element.eleme.cn/#/zh-CN" class="item-link svelte-1kgta4e"><img
-                        data-src="https://element.eleme.cn/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://element.eleme.cn/#/zh-CN" class="item-link wrap">
+                    <img data-src="https://element.eleme.cn/favicon.ico" alt="" class="wrap"
                         src="https://element.eleme.cn/favicon.ico">
-                    <span class="svelte-1kgta4e">element</span>
+
+                    <span class="wrap">element</span>
                 </a>
 
-                <a target="_blank" href="https://www.bilibili.com/" class="item-link svelte-1kgta4e"><img
-                        data-src="https://www.bilibili.com/favicon.ico?v=1" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.bilibili.com/" class="item-link wrap">
+                    <img data-src="https://www.bilibili.com/favicon.ico?v=1" alt="" class="wrap"
                         src="https://www.bilibili.com/favicon.ico?v=1">
-                    <span class="svelte-1kgta4e">哔哩哔哩</span>
+
+                    <span class="wrap">哔哩哔哩</span>
                 </a>
 
-                <a target="_blank" href="https://animista.net/" class="item-link svelte-1kgta4e"><img
-                        data-src="https://animista.net/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://animista.net/favicon.ico"> <span class="svelte-1kgta4e">css 动画</span>
+                <a target="_blank" href="https://animista.net/" class="item-link wrap">
+                    <img data-src="https://animista.net/favicon.ico" alt="" class="wrap"
+                        src="https://animista.net/favicon.ico">
+                    <span class="wrap">css 动画</span>
                 </a>
-                <a target="_blank" href="https://www.ui.cn/" class="item-link svelte-1kgta4e"><img
-                        data-src="https://www.ui.cn/Public/img/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.ui.cn/" class="item-link wrap">
+                    <img data-src="https://www.ui.cn/Public/img/favicon.ico" alt="" class="wrap"
                         src="https://www.ui.cn/Public/img/favicon.ico">
-                    <span class="svelte-1kgta4e">UI中国</span>
+
+                    <span class="wrap">UI中国</span>
                 </a>
 
-                <a target="_blank" href="https://cn.vuejs.org/" class="item-link svelte-1kgta4e"
-                    title="渐进式 JavaScript 框架"><img data-src="https://cn.vuejs.org/logo.svg" alt=""
-                        class="svelte-1kgta4e" src="https://cn.vuejs.org/logo.svg">
-                    <span class="svelte-1kgta4e">vue3</span>
+                <a target="_blank" href="https://cn.vuejs.org/" class="item-link wrap" title="渐进式 JavaScript 框架">
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
+                        src="https://cn.vuejs.org/logo.svg">
+
+                    <span class="wrap">vue3</span>
                 </a>
-                <a target="_blank" href="https://echarts.apache.org/zh/index.html" class="item-link svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/e901f8e8-e500-4fcc-a153-ebfe6dfe77d0.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://echarts.apache.org/zh/index.html" class="item-link wrap">
+
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/e901f8e8-e500-4fcc-a153-ebfe6dfe77d0.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/e901f8e8-e500-4fcc-a153-ebfe6dfe77d0.png">
-                    <span class="svelte-1kgta4e">echarts</span>
+
+                    <span class="wrap">echarts</span>
                 </a>
-                <a target="_blank" href="https://element-plus.gitee.io/zh-CN/" class="item-link svelte-1kgta4e"><img
-                        data-src="https://element-plus.gitee.io/images/element-plus-logo-small.svg" alt=""
-                        class="svelte-1kgta4e" src="https://element-plus.gitee.io/images/element-plus-logo-small.svg">
-                    <span class="svelte-1kgta4e">element-plus</span>
+                <a target="_blank" href="https://element-plus.gitee.io/zh-CN/" class="item-link wrap">
+
+                    <img data-src="https://element-plus.gitee.io/images/element-plus-logo-small.svg" alt="" class="wrap"
+                        src="https://element-plus.gitee.io/images/element-plus-logo-small.svg">
+
+                    <span class="wrap">element-plus</span>
                 </a>
-                <a target="_blank" href="https://cssgradient.io/" class="item-link svelte-1kgta4e"><img
-                        data-src="https://cssgradient.io/images/favicon-23859487.png" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://cssgradient.io/" class="item-link wrap">
+                    <img data-src="https://cssgradient.io/images/favicon-23859487.png" alt="" class="wrap"
                         src="https://cssgradient.io/images/favicon-23859487.png">
-                    <span class="svelte-1kgta4e">css
+
+                    <span class="wrap">css
                         渐变色</span>
                 </a>
-                <a target="_blank" href="https://www.runoob.com/" class="item-link svelte-1kgta4e"><img
-                        data-src="https://static.runoob.com/images/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.runoob.com/" class="item-link wrap">
+                    <img data-src="https://static.runoob.com/images/favicon.ico" alt="" class="wrap"
                         src="https://static.runoob.com/images/favicon.ico">
-                    <span class="svelte-1kgta4e">菜鸟教程</span>
+
+                    <span class="wrap">菜鸟教程</span>
 
                 </a>
-                <a target="_blank" href="https://www.antdv.com/docs/vue/introduce-cn/"
-                    class="item-link svelte-1kgta4e"><img data-src="https://qn.antdv.com/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://qn.antdv.com/favicon.ico">
-                    <span class="svelte-1kgta4e">antd
+                <a target="_blank" href="https://www.antdv.com/docs/vue/introduce-cn/" class="item-link wrap">
+                    <img data-src="https://qn.antdv.com/favicon.ico" alt="" class="wrap"
+                        src="https://qn.antdv.com/favicon.ico">
+
+                    <span class="wrap">antd
                         vue</span>
-                </a><a target="_blank" href="https://tool.lu/" class="item-link svelte-1kgta4e">
-                    <img data-src="https://tool.lu/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://tool.lu/favicon.ico">
-                    <span class="svelte-1kgta4e">在线工具</span>
+                </a><a target="_blank" href="https://tool.lu/" class="item-link wrap">
+
+                    <img data-src="https://tool.lu/favicon.ico" alt="" class="wrap" src="https://tool.lu/favicon.ico">
+
+                    <span class="wrap">在线工具</span>
                 </a>
-                <a target="_blank" href="https://developer.mozilla.org/zh-CN" class="item-link svelte-1kgta4e">
-                    <img data-src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt=""
-                        class="svelte-1kgta4e" src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png">
-                    <span class="svelte-1kgta4e">MDN</span>
+                <a target="_blank" href="https://developer.mozilla.org/zh-CN" class="item-link wrap">
+
+                    <img data-src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="" class="wrap"
+                        src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png">
+
+                    <span class="wrap">MDN</span>
                 </a>
-                <a target="_blank" href="https://vant-contrib.gitee.io/vant/v3/#/zh-CN"
-                    class="item-link svelte-1kgta4e"><img data-src="https://img.yzcdn.cn/vant/logo.png" alt=""
-                        class="svelte-1kgta4e" src="https://img.yzcdn.cn/vant/logo.png">
-                    <span class="svelte-1kgta4e">vant</span>
+                <a target="_blank" href="https://vant-contrib.gitee.io/vant/v3/#/zh-CN" class="item-link wrap">
+                    <img data-src="https://img.yzcdn.cn/vant/logo.png" alt="" class="wrap"
+                        src="https://img.yzcdn.cn/vant/logo.png">
+
+                    <span class="wrap">vant</span>
                 </a>
-                <a target="_blank" href="https://hejialianghe.gitee.io/" class="item-link svelte-1kgta4e">
-                    <img data-src="https://hejialianghe.gitee.io/logo.png" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://hejialianghe.gitee.io/" class="item-link wrap">
+
+                    <img data-src="https://hejialianghe.gitee.io/logo.png" alt="" class="wrap"
                         src="https://hejialianghe.gitee.io/logo.png">
-                    <span class="svelte-1kgta4e">web全栈体系</span>
+
+                    <span class="wrap">web全栈体系</span>
                 </a>
-                <a target="_blank" href="https://www.iconfont.cn/" class="item-link svelte-1kgta4e"><img
-                        data-src="https://img.alicdn.com/imgextra/i2/O1CN01ZyAlrn1MwaMhqz36G_!!6000000001499-73-tps-64-64.ico"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.iconfont.cn/" class="item-link wrap">
+                    <img data-src="https://img.alicdn.com/imgextra/i2/O1CN01ZyAlrn1MwaMhqz36G_!!6000000001499-73-tps-64-64.ico"
+                        alt="" class="wrap"
                         src="https://img.alicdn.com/imgextra/i2/O1CN01ZyAlrn1MwaMhqz36G_!!6000000001499-73-tps-64-64.ico">
-                    <span class="svelte-1kgta4e">iconfont</span>
+
+                    <span class="wrap">iconfont</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="course">
-            <h3 class="svelte-1kgta4e">教程</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://www.runoob.com/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://static.runoob.com/images/favicon.ico" alt="" class="svelte-1kgta4e"
+        <div class="list wrap" id="course">
+            <h3 class="wrap">教程</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://www.runoob.com/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://static.runoob.com/images/favicon.ico" alt="" class="wrap"
                         src="https://static.runoob.com/images/favicon.ico">
-                    <span class="svelte-1kgta4e">菜鸟教程</span>
+
+                    <span class="wrap">菜鸟教程</span>
                 </a>
-                <a target="_blank" href="https://developer.mozilla.org/zh-CN"
-                    class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt=""
-                        class="svelte-1kgta4e" src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png">
-                    <span class="svelte-1kgta4e">MDN</span>
+                <a target="_blank" href="https://developer.mozilla.org/zh-CN" class="item-link text-overflow wrap">
+
+                    <img data-src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="" class="wrap"
+                        src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png">
+
+                    <span class="wrap">MDN</span>
                 </a>
-                <a target="_blank" href="https://www.w3school.com.cn/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://www.w3school.com.cn/ui2019/logo-16-red.png" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.w3school.com.cn/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://www.w3school.com.cn/ui2019/logo-16-red.png" alt="" class="wrap"
                         src="https://www.w3school.com.cn/ui2019/logo-16-red.png">
-                    <span class="svelte-1kgta4e">w3school</span>
+
+                    <span class="wrap">w3school</span>
                 </a>
-                <a target="_blank" href="https://www.bilibili.com/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://www.bilibili.com/favicon.ico?v=1" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.bilibili.com/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://www.bilibili.com/favicon.ico?v=1" alt="" class="wrap"
                         src="https://www.bilibili.com/favicon.ico?v=1">
-                    <span class="svelte-1kgta4e">哔哩哔哩</span>
+
+                    <span class="wrap">哔哩哔哩</span>
                 </a>
-                <a target="_blank" href="https://www.imooc.com/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://www.imooc.com/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.imooc.com/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://www.imooc.com/favicon.ico" alt="" class="wrap"
                         src="https://www.imooc.com/favicon.ico">
-                    <span class="svelte-1kgta4e">慕课网</span>
+
+                    <span class="wrap">慕课网</span>
                 </a>
-                <a target="_blank" href="https://docschina.org/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://docschina.org/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://docschina.org/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://docschina.org/favicon.ico" alt="" class="wrap"
                         src="https://docschina.org/favicon.ico">
-                    <span class="svelte-1kgta4e">印记中文</span>
+
+                    <span class="wrap">印记中文</span>
                 </a>
-                <a target="_blank" href="https://www.baidu.com/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://www.baidu.com/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.baidu.com/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://www.baidu.com/favicon.ico" alt="" class="wrap"
                         src="https://www.baidu.com/favicon.ico">
-                    <span class="svelte-1kgta4e">百度</span>
+
+                    <span class="wrap">百度</span>
                 </a>
-                <a target="_blank" href="https://chinese.freecodecamp.org/learn"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://chinese.freecodecamp.org/favicon-32x32.png?v=6cba562cbd10e31af925a976f3db73f7"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://chinese.freecodecamp.org/learn" class="item-link text-overflow wrap">
+                    <img data-src="https://chinese.freecodecamp.org/favicon-32x32.png?v=6cba562cbd10e31af925a976f3db73f7"
+                        alt="" class="wrap"
                         src="https://chinese.freecodecamp.org/favicon-32x32.png?v=6cba562cbd10e31af925a976f3db73f7">
-                    <span class="svelte-1kgta4e">freeCodeCamp</span>
+
+                    <span class="wrap">freeCodeCamp</span>
                 </a>
-                <a target="_blank" href="http://blenderco.cn/" class="item-link text-overflow svelte-1kgta4e">
+                <a target="_blank" href="http://blenderco.cn/" class="item-link text-overflow wrap">
+
                     <img data-src="https://uimgproxy.suning.cn/uimg1/sop/commodity/vVvk0AsMAZA1ATV98CVCbQ.png" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://uimgproxy.suning.cn/uimg1/sop/commodity/vVvk0AsMAZA1ATV98CVCbQ.png">
-                    <span class="svelte-1kgta4e">blender 布的</span>
+                        class="wrap" src="https://uimgproxy.suning.cn/uimg1/sop/commodity/vVvk0AsMAZA1ATV98CVCbQ.png">
+
+                    <span class="wrap">blender 布的</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="community">
-            <h3 class="svelte-1kgta4e">社区</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://juejin.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png"
-                        alt="" class="svelte-1kgta4e"
+        <div class="list wrap" id="community">
+            <h3 class="wrap">社区</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://juejin.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png"
+                        alt="" class="wrap"
                         src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png">
-                    <span class="svelte-1kgta4e">掘金</span>
+
+                    <span class="wrap">掘金</span>
                 </a>
-                <a target="_blank" href="https://cnodejs.org/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://static2.cnodejs.org/public/images/cnode_icon_32.png" alt=""
-                        class="svelte-1kgta4e" src="https://static2.cnodejs.org/public/images/cnode_icon_32.png"> <span
-                        class="svelte-1kgta4e">cnode</span>
+                <a target="_blank" href="https://cnodejs.org/" class="item-link text-overflow wrap">
+                    <img data-src="https://static2.cnodejs.org/public/images/cnode_icon_32.png" alt="" class="wrap"
+                        src="https://static2.cnodejs.org/public/images/cnode_icon_32.png">
+                    <span class="wrap">cnode</span>
                 </a>
-                <a target="_blank" href="https://segmentfault.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/4dc55388-e42d-4c25-b87f-b60dea208161.ico"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://segmentfault.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/4dc55388-e42d-4c25-b87f-b60dea208161.ico"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/4dc55388-e42d-4c25-b87f-b60dea208161.ico">
-                    <span class="svelte-1kgta4e">segmentfault</span>
+
+                    <span class="wrap">segmentfault</span>
                 </a>
-                <a target="_blank" href="http://github.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://images.frontendjs.com/github.png?imageView2/2/h/30" alt=""
-                        class="svelte-1kgta4e" src="https://images.frontendjs.com/github.png?imageView2/2/h/30"> <span
-                        class="svelte-1kgta4e">github</span>
+                <a target="_blank" href="http://github.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://images.frontendjs.com/github.png?imageView2/2/h/30" alt="" class="wrap"
+                        src="https://images.frontendjs.com/github.png?imageView2/2/h/30">
+                    <span class="wrap">github</span>
                 </a>
-                <a target="_blank" href="https://gitee.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://gitee.com/assets/favicon_message.ico?1581387642851" alt=""
-                        class="svelte-1kgta4e" src="https://gitee.com/assets/favicon_message.ico?1581387642851"> <span
-                        class="svelte-1kgta4e">码云</span>
+                <a target="_blank" href="https://gitee.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://gitee.com/assets/favicon_message.ico?1581387642851" alt="" class="wrap"
+                        src="https://gitee.com/assets/favicon_message.ico?1581387642851">
+                    <span class="wrap">码云</span>
                 </a>
-                <a target="_blank" href="https://www.oschina.net/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://static.oschina.net/new-osc/img/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://static.oschina.net/new-osc/img/favicon.ico"> <span
-                        class="svelte-1kgta4e">开源中国</span>
+                <a target="_blank" href="https://www.oschina.net/" class="item-link text-overflow wrap">
+                    <img data-src="https://static.oschina.net/new-osc/img/favicon.ico" alt="" class="wrap"
+                        src="https://static.oschina.net/new-osc/img/favicon.ico">
+                    <span class="wrap">开源中国</span>
                 </a>
-                <a target="_blank" href="https://stackoverflow.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196"> <span
-                        class="svelte-1kgta4e">stackoverflow</span>
+                <a target="_blank" href="https://stackoverflow.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196" alt=""
+                        class="wrap" src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
+                    <span class="wrap">stackoverflow</span>
                 </a>
-                <a target="_blank" href="https://www.jianshu.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.jianshu.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.jianshu.com/favicon.ico"> <span class="svelte-1kgta4e">简书</span>
+                <a target="_blank" href="https://www.jianshu.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.jianshu.com/favicon.ico" alt="" class="wrap"
+                        src="https://www.jianshu.com/favicon.ico">
+                    <span class="wrap">简书</span>
                 </a>
-                <a target="_blank" href="https://www.zhihu.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://static.zhihu.com/heifetz/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://static.zhihu.com/heifetz/favicon.ico"> <span class="svelte-1kgta4e">知乎</span>
+                <a target="_blank" href="https://www.zhihu.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://static.zhihu.com/heifetz/favicon.ico" alt="" class="wrap"
+                        src="https://static.zhihu.com/heifetz/favicon.ico">
+                    <span class="wrap">知乎</span>
                 </a>
-                <a target="_blank" href="https://leetcode.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://leetcode.cn/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://leetcode.cn/favicon.ico"> <span class="svelte-1kgta4e">力扣</span>
+                <a target="_blank" href="https://leetcode.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://leetcode.cn/favicon.ico" alt="" class="wrap"
+                        src="https://leetcode.cn/favicon.ico">
+                    <span class="wrap">力扣</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="archive">
-            <h3 class="svelte-1kgta4e">文档</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://cli.vuejs.org/zh/guide/"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://cn.vuejs.org/logo.svg" alt=""
-                        class="svelte-1kgta4e" src="https://cn.vuejs.org/logo.svg"> <span
-                        class="svelte-1kgta4e">vue-Cli</span>
-                </a>
-                <a target="_blank" href="https://router.vuejs.org/zh/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="svelte-1kgta4e"
+        <div class="list wrap" id="archive">
+            <h3 class="wrap">文档</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://cli.vuejs.org/zh/guide/" class="item-link text-overflow wrap">
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
                         src="https://cn.vuejs.org/logo.svg">
-                    <span class="svelte-1kgta4e">vue-Router</span>
+                    <span class="wrap">vue-Cli</span>
                 </a>
-                <a target="_blank" href="https://vuex.vuejs.org/zh/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://router.vuejs.org/zh/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
                         src="https://cn.vuejs.org/logo.svg">
-                    <span class="svelte-1kgta4e">vue-Vuex</span>
+
+                    <span class="wrap">vue-Router</span>
                 </a>
-                <a target="_blank" href="https://vueuse.org/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://vuex.vuejs.org/zh/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
                         src="https://cn.vuejs.org/logo.svg">
-                    <span class="svelte-1kgta4e">vueUse</span>
+
+                    <span class="wrap">vue-Vuex</span>
                 </a>
-                <a target="_blank" href="https://kazupon.github.io/vue-i18n/zh/"
-                    class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://vueuse.org/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
                         src="https://cn.vuejs.org/logo.svg">
-                    <span class="svelte-1kgta4e">vue-i18n</span>
+
+                    <span class="wrap">vueUse</span>
                 </a>
-                <a target="_blank" href="https://pinia.vuejs.org/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://pinia.vuejs.org/logo.png" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://kazupon.github.io/vue-i18n/zh/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
+                        src="https://cn.vuejs.org/logo.svg">
+
+                    <span class="wrap">vue-i18n</span>
+                </a>
+                <a target="_blank" href="https://pinia.vuejs.org/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://pinia.vuejs.org/logo.png" alt="" class="wrap"
                         src="https://pinia.vuejs.org/logo.png">
-                    <span class="svelte-1kgta4e">Pinia</span>
+
+                    <span class="wrap">Pinia</span>
                 </a>
                 <a target="_blank" href="http://react-guide.github.io/react-router-cn/index.html"
-                    class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://react.docschina.org/favicon.ico" alt="" class="svelte-1kgta4e"
+                    class="item-link text-overflow wrap">
+
+                    <img data-src="https://react.docschina.org/favicon.ico" alt="" class="wrap"
                         src="https://react.docschina.org/favicon.ico">
-                    <span class="svelte-1kgta4e">react-router</span>
+
+                    <span class="wrap">react-router</span>
                 </a>
-                <a target="_blank" href="https://www.redux.org.cn/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://react.docschina.org/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.redux.org.cn/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://react.docschina.org/favicon.ico" alt="" class="wrap"
                         src="https://react.docschina.org/favicon.ico">
-                    <span class="svelte-1kgta4e">redux</span>
+
+                    <span class="wrap">redux</span>
                 </a>
-                <a target="_blank" href="https://cn.mobx.js.org/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://www.mobxjs.com/img/favicon.png" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://cn.mobx.js.org/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://www.mobxjs.com/img/favicon.png" alt="" class="wrap"
                         src="https://www.mobxjs.com/img/favicon.png">
-                    <span class="svelte-1kgta4e">mobx</span>
+
+                    <span class="wrap">mobx</span>
                 </a>
-                <a target="_blank" href="https://www.html5plus.org/doc/h5p.html"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://www.html5plus.org/favicon.ico"
-                        alt="" class="svelte-1kgta4e" src="https://www.html5plus.org/favicon.ico"> <span
-                        class="svelte-1kgta4e">h5Api</span>
+                <a target="_blank" href="https://www.html5plus.org/doc/h5p.html" class="item-link text-overflow wrap">
+                    <img data-src="https://www.html5plus.org/favicon.ico" alt="" class="wrap"
+                        src="https://www.html5plus.org/favicon.ico">
+                    <span class="wrap">h5Api</span>
                 </a>
-                <a target="_blank" href="https://cssvalues.com/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://cssvalues.com/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://cssvalues.com/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://cssvalues.com/favicon.ico" alt="" class="wrap"
                         src="https://cssvalues.com/favicon.ico">
-                    <span class="svelte-1kgta4e">css 属性速查</span>
+
+                    <span class="wrap">css 属性速查</span>
                 </a>
                 <a target="_blank" href="https://www.runoob.com/cssref/css-selectors.html"
-                    class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://static.runoob.com/images/favicon.ico" alt="" class="svelte-1kgta4e"
+                    class="item-link text-overflow wrap">
+
+                    <img data-src="https://static.runoob.com/images/favicon.ico" alt="" class="wrap"
                         src="https://static.runoob.com/images/favicon.ico">
-                    <span class="svelte-1kgta4e">css 选择器</span>
+
+                    <span class="wrap">css 选择器</span>
                 </a>
-                <a target="_blank" href="https://1loc.dev/" class="item-link text-overflow svelte-1kgta4e">
+                <a target="_blank" href="https://1loc.dev/" class="item-link text-overflow wrap">
+
                     <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/d01c693b-1ebb-4209-b13e-4ed5b13b3366.png"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/d01c693b-1ebb-4209-b13e-4ed5b13b3366.png">
-                    <span class="svelte-1kgta4e">js 一行代码</span>
+
+                    <span class="wrap">js 一行代码</span>
                 </a>
-                <a target="_blank" href="https://overapi.com/" class="item-link text-overflow svelte-1kgta4e"
-                    title="程序员备忘录">
-                    <img data-src="https://overapi.com/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://overapi.com/" class="item-link text-overflow wrap" title="程序员备忘录">
+
+                    <img data-src="https://overapi.com/favicon.ico" alt="" class="wrap"
                         src="https://overapi.com/favicon.ico">
-                    <span class="svelte-1kgta4e">overapi</span>
+
+                    <span class="wrap">overapi</span>
                 </a>
                 <a target="_blank" href="https://lhammer.cn/You-need-to-know-css/#/zh-cn/"
-                    class="item-link text-overflow svelte-1kgta4e" title="Web开发者应该掌握的 CSS 诀窍">
-                    <img data-src="https://lhammer.cn/You-need-to-know-css/static/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://lhammer.cn/You-need-to-know-css/static/favicon.ico">
-                    <span class="svelte-1kgta4e">CSS
+                    class="item-link text-overflow wrap" title="Web开发者应该掌握的 CSS 诀窍">
+
+                    <img data-src="https://lhammer.cn/You-need-to-know-css/static/favicon.ico" alt="" class="wrap"
+                        src="https://lhammer.cn/You-need-to-know-css/static/favicon.ico">
+
+                    <span class="wrap">CSS
                         诀窍</span>
                 </a>
-                <a target="_blank" href="https://hejialianghe.gitee.io/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://hejialianghe.gitee.io/logo.png" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://hejialianghe.gitee.io/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://hejialianghe.gitee.io/logo.png" alt="" class="wrap"
                         src="https://hejialianghe.gitee.io/logo.png">
-                    <span class="svelte-1kgta4e">web全栈体系</span>
+
+                    <span class="wrap">web全栈体系</span>
                 </a>
-                <a target="_blank" href="https://tc39.es/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://tc39.es/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://tc39.es/favicon.ico">
-                    <span class="svelte-1kgta4e">TC39</span>
+                <a target="_blank" href="https://tc39.es/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://tc39.es/favicon.ico" alt="" class="wrap" src="https://tc39.es/favicon.ico">
+
+                    <span class="wrap">TC39</span>
                 </a>
-                <a target="_blank" href="https://www.bootcdn.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.bootcdn.cn/assets/ico/favicon.ico?1644166305141" alt=""
-                        class="svelte-1kgta4e" src="https://www.bootcdn.cn/assets/ico/favicon.ico?1644166305141"> <span
-                        class="svelte-1kgta4e">BootCDN</span>
+                <a target="_blank" href="https://www.bootcdn.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.bootcdn.cn/assets/ico/favicon.ico?1644166305141" alt="" class="wrap"
+                        src="https://www.bootcdn.cn/assets/ico/favicon.ico?1644166305141">
+                    <span class="wrap">BootCDN</span>
                 </a>
-                <a target="_blank" href="https://caniuse.com/flexbox" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://caniuse.com/img/favicon-128.png" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://caniuse.com/flexbox" class="item-link text-overflow wrap">
+
+                    <img data-src="https://caniuse.com/img/favicon-128.png" alt="" class="wrap"
                         src="https://caniuse.com/img/favicon-128.png">
-                    <span class="svelte-1kgta4e">web兼容性</span>
+
+                    <span class="wrap">web兼容性</span>
                 </a>
-                <a target="_blank" href="http://zhongguose.com/" class="item-link text-overflow svelte-1kgta4e">
+                <a target="_blank" href="http://zhongguose.com/" class="item-link text-overflow wrap">
+
                     <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/fbe27402-b82c-4e0b-b74b-309720a34d17.ico"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/fbe27402-b82c-4e0b-b74b-309720a34d17.ico">
-                    <span class="svelte-1kgta4e">中国色</span>
+
+                    <span class="wrap">中国色</span>
                 </a>
-                <a target="_blank" href="https://sunpma.com/other/rgb/" class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://sunpma.com/other/rgb/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://sunpma.com/other/rgb/" class="item-link text-overflow wrap">
+
+                    <img data-src="https://sunpma.com/other/rgb/favicon.ico" alt="" class="wrap"
                         src="https://sunpma.com/other/rgb/favicon.ico">
-                    <span class="svelte-1kgta4e">颜色转换</span>
+
+                    <span class="wrap">颜色转换</span>
                 </a>
-                <a target="_blank" href="https://csscoco.com/inspiration/#/"
-                    class="item-link text-overflow svelte-1kgta4e"
+                <a target="_blank" href="https://csscoco.com/inspiration/#/" class="item-link text-overflow wrap"
                     title="这里可以让你寻找到使用或者是学习 CSS 的灵感，以分类的形式，展示不同 CSS 属性或者不同的课题使用 CSS 来解决的各种方法。">
-                    <img data-src="https://csscoco.com/inspiration/logo2.png" alt="" class="svelte-1kgta4e"
+
+                    <img data-src="https://csscoco.com/inspiration/logo2.png" alt="" class="wrap"
                         src="https://csscoco.com/inspiration/logo2.png">
-                    <span class="svelte-1kgta4e">CSS-Inspiration</span>
+
+                    <span class="wrap">CSS-Inspiration</span>
                 </a>
-                <a target="_blank" href="https://es6.ruanyifeng.com/#docs/style"
-                    class="item-link text-overflow svelte-1kgta4e" title="阮一峰编写的ES6代码规范">
-                    <img data-src="https://es6.ruanyifeng.com/favicon.ico" alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://es6.ruanyifeng.com/#docs/style" class="item-link text-overflow wrap"
+                    title="阮一峰编写的ES6代码规范">
+
+                    <img data-src="https://es6.ruanyifeng.com/favicon.ico" alt="" class="wrap"
                         src="https://es6.ruanyifeng.com/favicon.ico">
-                    <span class="svelte-1kgta4e">ES6</span>
+
+                    <span class="wrap">ES6</span>
                 </a>
-                <a target="_blank" href="https://any86.github.io/any-rule/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://any86.github.io/any-rule/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://any86.github.io/any-rule/favicon.ico"> <span class="svelte-1kgta4e">正则大全</span>
+                <a target="_blank" href="https://any86.github.io/any-rule/" class="item-link text-overflow wrap">
+                    <img data-src="https://any86.github.io/any-rule/favicon.ico" alt="" class="wrap"
+                        src="https://any86.github.io/any-rule/favicon.ico">
+                    <span class="wrap">正则大全</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="classLib">
-            <h3 class="svelte-1kgta4e">类库</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="http://www.axios-js.com/" class="item-link text-overflow svelte-1kgta4e"
-                    title="易用、简洁且高效的http库"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/1a45b478-83a3-4f8d-b04e-d038d01b0b32.png"
-                        alt="" class="svelte-1kgta4e"
+        <div class="list wrap" id="classLib">
+            <h3 class="wrap">类库</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="http://www.axios-js.com/" class="item-link text-overflow wrap"
+                    title="易用、简洁且高效的http库">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/1a45b478-83a3-4f8d-b04e-d038d01b0b32.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/1a45b478-83a3-4f8d-b04e-d038d01b0b32.png">
-                    <span class="svelte-1kgta4e">axios</span>
+                    <span class="wrap">axios</span>
                 </a>
-                <a target="_blank" href="https://www.lodashjs.com/" class="item-link text-overflow svelte-1kgta4e"
-                    title="一致性、模块化、高性能的 JavaScript 实用工具库"><img data-src="https://www.lodashjs.com/img/favicon.ico"
-                        alt="" class="svelte-1kgta4e" src="https://www.lodashjs.com/img/favicon.ico"> <span
-                        class="svelte-1kgta4e">lodash</span>
-                </a><a target="_blank" href="https://jquery.cuishifeng.cn/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://jquery.cuishifeng.cn/images/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://jquery.cuishifeng.cn/images/favicon.ico"> <span
-                        class="svelte-1kgta4e">jquery</span>
+                <a target="_blank" href="https://www.lodashjs.com/" class="item-link text-overflow wrap"
+                    title="一致性、模块化、高性能的 JavaScript 实用工具库">
+                    <img data-src="https://www.lodashjs.com/img/favicon.ico" alt="" class="wrap"
+                        src="https://www.lodashjs.com/img/favicon.ico">
+                    <span class="wrap">lodash</span>
+                </a><a target="_blank" href="https://jquery.cuishifeng.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://jquery.cuishifeng.cn/images/favicon.ico" alt="" class="wrap"
+                        src="https://jquery.cuishifeng.cn/images/favicon.ico">
+                    <span class="wrap">jquery</span>
                 </a>
-                <a target="_blank" href="https://zeptojs.bootcss.com/#"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://zeptojs.bootcss.com/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://zeptojs.bootcss.com/favicon.png"> <span class="svelte-1kgta4e">zeptojs</span>
-                </a><a target="_blank" href="https://www.jq22.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/ad061805-85ad-4c4a-bf3e-97310384f41b.ico"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://zeptojs.bootcss.com/#" class="item-link text-overflow wrap">
+                    <img data-src="https://zeptojs.bootcss.com/favicon.png" alt="" class="wrap"
+                        src="https://zeptojs.bootcss.com/favicon.png">
+                    <span class="wrap">zeptojs</span>
+                </a>
+                <a target="_blank" href="https://www.jq22.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/ad061805-85ad-4c4a-bf3e-97310384f41b.ico"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/ad061805-85ad-4c4a-bf3e-97310384f41b.ico">
-                    <span class="svelte-1kgta4e">jq22</span>
+
+                    <span class="wrap">jq22</span>
                 </a>
-                <a target="_blank" href="http://momentjs.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/08972837-21b6-41fa-b6c8-b09acfc36c12.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="http://momentjs.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/08972837-21b6-41fa-b6c8-b09acfc36c12.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/08972837-21b6-41fa-b6c8-b09acfc36c12.png">
-                    <span class="svelte-1kgta4e">Moment</span>
+
+                    <span class="wrap">Moment</span>
                 </a>
-                <a target="_blank" href="https://v5.bootcss.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://v5.bootcss.com/docs/5.1/assets/img/favicons/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://v5.bootcss.com/docs/5.1/assets/img/favicons/favicon.ico">
-                    <span class="svelte-1kgta4e">bootstrap</span>
+                <a target="_blank" href="https://v5.bootcss.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://v5.bootcss.com/docs/5.1/assets/img/favicons/favicon.ico" alt="" class="wrap"
+                        src="https://v5.bootcss.com/docs/5.1/assets/img/favicons/favicon.ico">
+
+                    <span class="wrap">bootstrap</span>
                 </a>
-                <a target="_blank" href="https://3.swiper.com.cn/" class="item-link text-overflow svelte-1kgta4e"
-                    title="开源、免费、强大的移动端触摸滑动插件"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/c02b71d8-d851-4649-b023-a095c172fa72.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://3.swiper.com.cn/" class="item-link text-overflow wrap"
+                    title="开源、免费、强大的移动端触摸滑动插件">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/c02b71d8-d851-4649-b023-a095c172fa72.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/c02b71d8-d851-4649-b023-a095c172fa72.png">
-                    <span class="svelte-1kgta4e">swiper</span>
+
+                    <span class="wrap">swiper</span>
                 </a>
-                <a target="_blank" href="http://mockjs.com/" class="item-link text-overflow svelte-1kgta4e"
-                    title="生成随机数据，拦截 Ajax 请求"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/ec42ab2c-6526-4deb-b5d3-0894d2887fc0.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="http://mockjs.com/" class="item-link text-overflow wrap"
+                    title="生成随机数据，拦截 Ajax 请求">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/ec42ab2c-6526-4deb-b5d3-0894d2887fc0.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/ec42ab2c-6526-4deb-b5d3-0894d2887fc0.png">
-                    <span class="svelte-1kgta4e">mockjs</span>
+
+                    <span class="wrap">mockjs</span>
                 </a>
-                <a target="_blank" href="https://dayjs.fenxianglu.cn/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://dayjs.fenxianglu.cn/assets/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://dayjs.fenxianglu.cn/assets/favicon.png"> <span class="svelte-1kgta4e">dayjs</span>
+                <a target="_blank" href="https://dayjs.fenxianglu.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://dayjs.fenxianglu.cn/assets/favicon.png" alt="" class="wrap"
+                        src="https://dayjs.fenxianglu.cn/assets/favicon.png">
+                    <span class="wrap">dayjs</span>
                 </a>
-                <a target="_blank" href="https://bennettfeely.com/ztext/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://bennettfeely.com/ztext/img/icon/favicon-32x32.png" alt=""
-                        class="svelte-1kgta4e" src="https://bennettfeely.com/ztext/img/icon/favicon-32x32.png"> <span
-                        class="svelte-1kgta4e">ztext</span>
+                <a target="_blank" href="https://bennettfeely.com/ztext/" class="item-link text-overflow wrap">
+                    <img data-src="https://bennettfeely.com/ztext/img/icon/favicon-32x32.png" alt="" class="wrap"
+                        src="https://bennettfeely.com/ztext/img/icon/favicon-32x32.png">
+                    <span class="wrap">ztext</span>
                 </a>
-                <a target="_blank" href="https://mathjs.org/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://mathjs.org/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://mathjs.org/favicon.ico"> <span class="svelte-1kgta4e">mathjs</span>
+                <a target="_blank" href="https://mathjs.org/" class="item-link text-overflow wrap">
+                    <img data-src="https://mathjs.org/favicon.ico" alt="" class="wrap"
+                        src="https://mathjs.org/favicon.ico">
+                    <span class="wrap">mathjs</span>
                 </a>
-                <a target="_blank" href="https://pqina.nl/flip/#nutshell"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://pqina.nl/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://pqina.nl/favicon.ico"> <span
-                        class="svelte-1kgta4e">flip</span>
-                </a><a target="_blank" href="https://carlosroso.com/notyf/"
-                    class="item-link text-overflow svelte-1kgta4e"
-                    title="用于 toast 通知的简约 JavaScript 库。响应式，A11Y，无依赖。很小 (~3KB)"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/2a20ea40-eded-411d-a40d-ae45cd564f36.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://pqina.nl/flip/#nutshell" class="item-link text-overflow wrap">
+                    <img data-src="https://pqina.nl/favicon.ico" alt="" class="wrap" src="https://pqina.nl/favicon.ico">
+                    <span class="wrap">flip</span>
+                </a><a target="_blank" href="https://carlosroso.com/notyf/" class="item-link text-overflow wrap"
+                    title="用于 toast 通知的简约 JavaScript 库。响应式，A11Y，无依赖。很小 (~3KB)">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/2a20ea40-eded-411d-a40d-ae45cd564f36.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/2a20ea40-eded-411d-a40d-ae45cd564f36.png">
-                    <span class="svelte-1kgta4e">notyf</span>
+                    <span class="wrap">notyf</span>
                 </a>
-                <a target="_blank" href="https://ejs.bootcss.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://ejs.bootcss.com/assets/images/ejs-logo.png" alt="" class="svelte-1kgta4e"
-                        src="https://ejs.bootcss.com/assets/images/ejs-logo.png"> <span
-                        class="svelte-1kgta4e">ejs</span>
+                <a target="_blank" href="https://ejs.bootcss.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://ejs.bootcss.com/assets/images/ejs-logo.png" alt="" class="wrap"
+                        src="https://ejs.bootcss.com/assets/images/ejs-logo.png">
+                    <span class="wrap">ejs</span>
                 </a>
-                <a target="_blank" href="https://ahooks.gitee.io/zh-CN"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://ahooks.gitee.io/simple-logo.svg" alt="" class="svelte-1kgta4e"
-                        src="https://ahooks.gitee.io/simple-logo.svg"> <span class="svelte-1kgta4e">ahooks</span>
-                </a><a target="_blank" href="https://printjs.crabbly.com/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://printjs.crabbly.com/assets/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://printjs.crabbly.com/assets/favicon.ico"> <span
-                        class="svelte-1kgta4e">printjs</span>
+                <a target="_blank" href="https://ahooks.gitee.io/zh-CN" class="item-link text-overflow wrap">
+                    <img data-src="https://ahooks.gitee.io/simple-logo.svg" alt="" class="wrap"
+                        src="https://ahooks.gitee.io/simple-logo.svg">
+                    <span class="wrap">ahooks</span>
+                </a><a target="_blank" href="https://printjs.crabbly.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://printjs.crabbly.com/assets/favicon.ico" alt="" class="wrap"
+                        src="https://printjs.crabbly.com/assets/favicon.ico">
+                    <span class="wrap">printjs</span>
                 </a>
-                <a target="_blank" href="https://v2.formilyjs.org/zh-CN" class="item-link text-overflow svelte-1kgta4e"
-                    title="阿里巴巴统一前端表单解决方案"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/66335525-89a1-4cd1-a5e0-035d6e4120c7.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://v2.formilyjs.org/zh-CN" class="item-link text-overflow wrap"
+                    title="阿里巴巴统一前端表单解决方案">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/66335525-89a1-4cd1-a5e0-035d6e4120c7.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/66335525-89a1-4cd1-a5e0-035d6e4120c7.png">
-                    <span class="svelte-1kgta4e">formilyjs</span>
+                    <span class="wrap">formilyjs</span>
                 </a>
-                <a target="_blank" href="https://www.tailwindcss.cn/" class="item-link text-overflow svelte-1kgta4e"
-                    title="无需离开您的HTML,即可快速建立现代网站。"><img data-src="https://www.tailwindcss.cn/favicon-32x32.png" alt=""
-                        class="svelte-1kgta4e" src="https://www.tailwindcss.cn/favicon-32x32.png"> <span
-                        class="svelte-1kgta4e">tailwindcss</span>
+                <a target="_blank" href="https://www.tailwindcss.cn/" class="item-link text-overflow wrap"
+                    title="无需离开您的HTML,即可快速建立现代网站。">
+                    <img data-src="https://www.tailwindcss.cn/favicon-32x32.png" alt="" class="wrap"
+                        src="https://www.tailwindcss.cn/favicon-32x32.png">
+                    <span class="wrap">tailwindcss</span>
                 </a>
-                <a target="_blank" href="https://eslint.org/" class="item-link text-overflow svelte-1kgta4e"
-                    title="查找并修复JavaScript代码中的问题"><img data-src="https://eslint.org/icon.svg" alt=""
-                        class="svelte-1kgta4e" src="https://eslint.org/icon.svg"> <span
-                        class="svelte-1kgta4e">ESlint</span>
-                </a><a target="_blank" href="http://mozilla.github.io/pdf.js/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="http://mozilla.github.io/pdf.js/images/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="http://mozilla.github.io/pdf.js/images/favicon.ico"> <span
-                        class="svelte-1kgta4e">PDFjs</span>
+                <a target="_blank" href="https://eslint.org/" class="item-link text-overflow wrap"
+                    title="查找并修复JavaScript代码中的问题">
+                    <img data-src="https://eslint.org/icon.svg" alt="" class="wrap" src="https://eslint.org/icon.svg">
+                    <span class="wrap">ESlint</span>
+                </a><a target="_blank" href="http://mozilla.github.io/pdf.js/" class="item-link text-overflow wrap">
+                    <img data-src="http://mozilla.github.io/pdf.js/images/favicon.ico" alt="" class="wrap"
+                        src="http://mozilla.github.io/pdf.js/images/favicon.ico">
+                    <span class="wrap">PDFjs</span>
                 </a>
-                <a target="_blank" href="https://windicss.org/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://windicss.org/assets/logo.svg" alt="" class="svelte-1kgta4e"
-                        src="https://windicss.org/assets/logo.svg"> <span class="svelte-1kgta4e">windicss</span>
+                <a target="_blank" href="https://windicss.org/" class="item-link text-overflow wrap">
+                    <img data-src="https://windicss.org/assets/logo.svg" alt="" class="wrap"
+                        src="https://windicss.org/assets/logo.svg">
+                    <span class="wrap">windicss</span>
                 </a>
-                <a target="_blank" href="https://bulma.zcopy.site/" class="item-link text-overflow svelte-1kgta4e"
-                    title="现代化的CSS框架"><img data-src="https://bulma.zcopy.site/favicons/favicon-32x32.png?v=201701041855"
-                        alt="" class="svelte-1kgta4e"
-                        src="https://bulma.zcopy.site/favicons/favicon-32x32.png?v=201701041855">
-                    <span class="svelte-1kgta4e">bulma</span>
+                <a target="_blank" href="https://bulma.zcopy.site/" class="item-link text-overflow wrap"
+                    title="现代化的CSS框架">
+                    <img data-src="https://bulma.zcopy.site/favicons/favicon-32x32.png?v=201701041855" alt=""
+                        class="wrap" src="https://bulma.zcopy.site/favicons/favicon-32x32.png?v=201701041855">
+                    <span class="wrap">bulma</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="uiLib">
-            <h3 class="svelte-1kgta4e">UI框架</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://element.eleme.cn/#/zh-CN"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://element.eleme.cn/favicon.ico"
-                        alt="" class="svelte-1kgta4e" src="https://element.eleme.cn/favicon.ico"> <span
-                        class="svelte-1kgta4e">element</span>
+        <div class="list wrap" id="uiLib">
+            <h3 class="wrap">UI框架</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://element.eleme.cn/#/zh-CN" class="item-link text-overflow wrap">
+                    <img data-src="https://element.eleme.cn/favicon.ico" alt="" class="wrap"
+                        src="https://element.eleme.cn/favicon.ico">
+                    <span class="wrap">element</span>
                 </a>
-                <a target="_blank" href="https://element-plus.gitee.io/zh-CN/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://element-plus.gitee.io/images/element-plus-logo-small.svg" alt=""
-                        class="svelte-1kgta4e" src="https://element-plus.gitee.io/images/element-plus-logo-small.svg">
-                    <span class="svelte-1kgta4e">element-plus</span>
+                <a target="_blank" href="https://element-plus.gitee.io/zh-CN/" class="item-link text-overflow wrap">
+                    <img data-src="https://element-plus.gitee.io/images/element-plus-logo-small.svg" alt="" class="wrap"
+                        src="https://element-plus.gitee.io/images/element-plus-logo-small.svg">
+
+                    <span class="wrap">element-plus</span>
                 </a>
                 <a target="_blank" href="https://www.antdv.com/docs/vue/introduce-cn/"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://qn.antdv.com/favicon.ico"
-                        alt="" class="svelte-1kgta4e" src="https://qn.antdv.com/favicon.ico"> <span
-                        class="svelte-1kgta4e">antd vue</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://qn.antdv.com/favicon.ico" alt="" class="wrap"
+                        src="https://qn.antdv.com/favicon.ico">
+                    <span class="wrap">antd vue</span>
                 </a>
                 <a target="_blank" href="https://ant.design/docs/react/introduce-cn"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png">
-                    <span class="svelte-1kgta4e">antd react</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png" alt=""
+                        class="wrap" src="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png">
+
+                    <span class="wrap">antd react</span>
                 </a>
-                <a target="_blank" href="https://mobile.ant.design/zh"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://gw.alipayobjects.com/zos/bmw-prod/69a27fcc-ce52-4f27-83f1-c44541e9b65d.svg"
-                        alt="" class="svelte-1kgta4e"
-                        src="https://gw.alipayobjects.com/zos/bmw-prod/69a27fcc-ce52-4f27-83f1-c44541e9b65d.svg"> <span
-                        class="svelte-1kgta4e">antd-mobile</span>
+                <a target="_blank" href="https://mobile.ant.design/zh" class="item-link text-overflow wrap">
+                    <img data-src="https://gw.alipayobjects.com/zos/bmw-prod/69a27fcc-ce52-4f27-83f1-c44541e9b65d.svg"
+                        alt="" class="wrap"
+                        src="https://gw.alipayobjects.com/zos/bmw-prod/69a27fcc-ce52-4f27-83f1-c44541e9b65d.svg">
+                    <span class="wrap">antd-mobile</span>
                 </a>
-                <a target="_blank" href="http://ng.ant.design/docs/introduce/zh"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://img.alicdn.com/tfs/TB1Jr2ASQvoK1RjSZFDXXXY3pXa-200-200.png" alt=""
-                        class="svelte-1kgta4e" src="https://img.alicdn.com/tfs/TB1Jr2ASQvoK1RjSZFDXXXY3pXa-200-200.png">
-                    <span class="svelte-1kgta4e">ng-zorro</span>
+                <a target="_blank" href="http://ng.ant.design/docs/introduce/zh" class="item-link text-overflow wrap">
+                    <img data-src="https://img.alicdn.com/tfs/TB1Jr2ASQvoK1RjSZFDXXXY3pXa-200-200.png" alt=""
+                        class="wrap" src="https://img.alicdn.com/tfs/TB1Jr2ASQvoK1RjSZFDXXXY3pXa-200-200.png">
+
+                    <span class="wrap">ng-zorro</span>
                 </a>
                 <a target="_blank" href="https://ng.mobile.ant.design/#/docs/introduce/zh"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://gw.alipayobjects.com/zos/rmsportal/vCgyalwcqlpHLsJOIMwA.ico" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://gw.alipayobjects.com/zos/rmsportal/vCgyalwcqlpHLsJOIMwA.ico">
-                    <span class="svelte-1kgta4e">ng-zorro-mobile</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://gw.alipayobjects.com/zos/rmsportal/vCgyalwcqlpHLsJOIMwA.ico" alt=""
+                        class="wrap" src="https://gw.alipayobjects.com/zos/rmsportal/vCgyalwcqlpHLsJOIMwA.ico">
+
+                    <span class="wrap">ng-zorro-mobile</span>
                 </a>
                 <a target="_blank" href="https://vant-contrib.gitee.io/vant/v3/#/zh-CN"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://img.yzcdn.cn/vant/logo.png"
-                        alt="" class="svelte-1kgta4e" src="https://img.yzcdn.cn/vant/logo.png"> <span
-                        class="svelte-1kgta4e">vant</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://img.yzcdn.cn/vant/logo.png" alt="" class="wrap"
+                        src="https://img.yzcdn.cn/vant/logo.png">
+                    <span class="wrap">vant</span>
                 </a>
-                <a target="_blank" href="https://www.uviewui.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.uviewui.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.uviewui.com/favicon.ico"> <span class="svelte-1kgta4e">uview</span>
+                <a target="_blank" href="https://www.uviewui.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.uviewui.com/favicon.ico" alt="" class="wrap"
+                        src="https://www.uviewui.com/favicon.ico">
+                    <span class="wrap">uview</span>
                 </a>
-                <a target="_blank" href="https://www.naiveui.com/zh-CN/light"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.naiveui.com/assets/naivelogo.93278402.svg" alt="" class="svelte-1kgta4e"
-                        src="https://www.naiveui.com/assets/naivelogo.93278402.svg"> <span class="svelte-1kgta4e">Naive
+                <a target="_blank" href="https://www.naiveui.com/zh-CN/light" class="item-link text-overflow wrap">
+                    <img data-src="https://www.naiveui.com/assets/naivelogo.93278402.svg" alt="" class="wrap"
+                        src="https://www.naiveui.com/assets/naivelogo.93278402.svg">
+                    <span class="wrap">Naive
                         UI</span>
                 </a>
                 <a target="_blank" href="https://varlet.gitee.io/varlet-ui/#/zh-CN/home"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://varlet.gitee.io/varlet-ui/varlet_icon.png" alt="" class="svelte-1kgta4e"
-                        src="https://varlet.gitee.io/varlet-ui/varlet_icon.png"> <span
-                        class="svelte-1kgta4e">varlet-ui</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://varlet.gitee.io/varlet-ui/varlet_icon.png" alt="" class="wrap"
+                        src="https://varlet.gitee.io/varlet-ui/varlet_icon.png">
+                    <span class="wrap">varlet-ui</span>
                 </a>
-                <a target="_blank" href="https://arco.design/react/docs/start"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://unpkg.byted-static.com/latest/byted/arco-config/assets/favicon.ico" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://unpkg.byted-static.com/latest/byted/arco-config/assets/favicon.ico"> <span
-                        class="svelte-1kgta4e">arco-design</span>
+                <a target="_blank" href="https://arco.design/react/docs/start" class="item-link text-overflow wrap">
+                    <img data-src="https://unpkg.byted-static.com/latest/byted/arco-config/assets/favicon.ico" alt=""
+                        class="wrap" src="https://unpkg.byted-static.com/latest/byted/arco-config/assets/favicon.ico">
+                    <span class="wrap">arco-design</span>
                 </a>
                 <a target="_blank" href="https://mui.com/zh/getting-started/installation/"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://mui.com/static/favicon.ico"
-                        alt="" class="svelte-1kgta4e" src="https://mui.com/static/favicon.ico"> <span
-                        class="svelte-1kgta4e">MUI</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://mui.com/static/favicon.ico" alt="" class="wrap"
+                        src="https://mui.com/static/favicon.ico">
+                    <span class="wrap">MUI</span>
                 </a>
-                <a target="_blank" href="https://tdesign.tencent.com/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://cdc.cdn-go.cn/tdc/latest/images/tdesign.svg" alt="" class="svelte-1kgta4e"
-                        src="https://cdc.cdn-go.cn/tdc/latest/images/tdesign.svg"> <span
-                        class="svelte-1kgta4e">TDesign</span>
+                <a target="_blank" href="https://tdesign.tencent.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://cdc.cdn-go.cn/tdc/latest/images/tdesign.svg" alt="" class="wrap"
+                        src="https://cdc.cdn-go.cn/tdc/latest/images/tdesign.svg">
+                    <span class="wrap">TDesign</span>
                 </a>
-                <a target="_blank" href="https://nutui.jd.com/jdt/#/" class="item-link text-overflow svelte-1kgta4e"
-                    title="京东科技移动端组件库"><img
-                        data-src="https://img12.360buyimg.com/imagetools/jfs/t1/101920/21/28459/834912/62870b04E0e1f20ec/17425bea5318a22c.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://nutui.jd.com/jdt/#/" class="item-link text-overflow wrap"
+                    title="京东科技移动端组件库">
+                    <img data-src="https://img12.360buyimg.com/imagetools/jfs/t1/101920/21/28459/834912/62870b04E0e1f20ec/17425bea5318a22c.png"
+                        alt="" class="wrap"
                         src="https://img12.360buyimg.com/imagetools/jfs/t1/101920/21/28459/834912/62870b04E0e1f20ec/17425bea5318a22c.png">
-                    <span class="svelte-1kgta4e">NutUI-JDT</span>
+
+                    <span class="wrap">NutUI-JDT</span>
                 </a>
-                <a target="_blank" href="https://vuetifyjs.com/zh-Hans/" class="item-link text-overflow svelte-1kgta4e"
-                    title="Material Design 框架"><img data-src="https://vuetifyjs.com/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://vuetifyjs.com/favicon.ico"> <span
-                        class="svelte-1kgta4e">Vuetify</span>
+                <a target="_blank" href="https://vuetifyjs.com/zh-Hans/" class="item-link text-overflow wrap"
+                    title="Material Design 框架">
+                    <img data-src="https://vuetifyjs.com/favicon.ico" alt="" class="wrap"
+                        src="https://vuetifyjs.com/favicon.ico">
+                    <span class="wrap">Vuetify</span>
                 </a>
-                <a target="_blank" href="https://semi.design/zh-CN/" class="item-link text-overflow svelte-1kgta4e"
-                    title="由抖音前端与 UED 团队维护，易于定制的现代化设计系统，帮助设计师与开发者打造高质量产品。"><img
-                        data-src="https://lf9-static.semi.design/obj/semi-tos/images/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://lf9-static.semi.design/obj/semi-tos/images/favicon.ico">
-                    <span class="svelte-1kgta4e">Semi Design</span>
+                <a target="_blank" href="https://semi.design/zh-CN/" class="item-link text-overflow wrap"
+                    title="由抖音前端与 UED 团队维护，易于定制的现代化设计系统，帮助设计师与开发者打造高质量产品。">
+                    <img data-src="https://lf9-static.semi.design/obj/semi-tos/images/favicon.ico" alt="" class="wrap"
+                        src="https://lf9-static.semi.design/obj/semi-tos/images/favicon.ico">
+
+                    <span class="wrap">Semi Design</span>
                 </a>
                 <a target="_blank" href="http://iview.talkingdata.com/#/components/guide/install"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://file.iviewui.com/file/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://file.iviewui.com/file/favicon.ico"> <span class="svelte-1kgta4e">iView</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://file.iviewui.com/file/favicon.ico" alt="" class="wrap"
+                        src="https://file.iviewui.com/file/favicon.ico">
+                    <span class="wrap">iView</span>
                 </a><a target="_blank" href="https://quark-design.hellobike.com/#/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://quark-design.hellobike.com/assets/favicon.7b83b3c2.ico" alt=""
-                        class="svelte-1kgta4e" src="https://quark-design.hellobike.com/assets/favicon.7b83b3c2.ico">
-                    <span class="svelte-1kgta4e">Quark</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://quark-design.hellobike.com/assets/favicon.7b83b3c2.ico" alt="" class="wrap"
+                        src="https://quark-design.hellobike.com/assets/favicon.7b83b3c2.ico">
+
+                    <span class="wrap">Quark</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="frame">
-            <h3 class="svelte-1kgta4e">框架</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://v2.cn.vuejs.org/" class="item-link text-overflow svelte-1kgta4e"
-                    title="渐进式 JavaScript 框架"><img data-src="https://cn.vuejs.org/logo.svg" alt=""
-                        class="svelte-1kgta4e" src="https://cn.vuejs.org/logo.svg"> <span
-                        class="svelte-1kgta4e">vue2</span>
-                </a><a target="_blank" href="https://cn.vuejs.org/" class="item-link text-overflow svelte-1kgta4e"
-                    title="渐进式 JavaScript 框架"><img data-src="https://cn.vuejs.org/logo.svg" alt=""
-                        class="svelte-1kgta4e" src="https://cn.vuejs.org/logo.svg"> <span
-                        class="svelte-1kgta4e">vue3</span>
+        <div class="list wrap" id="frame">
+            <h3 class="wrap">框架</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://v2.cn.vuejs.org/" class="item-link text-overflow wrap"
+                    title="渐进式 JavaScript 框架">
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
+                        src="https://cn.vuejs.org/logo.svg">
+                    <span class="wrap">vue2</span>
+                </a><a target="_blank" href="https://cn.vuejs.org/" class="item-link text-overflow wrap"
+                    title="渐进式 JavaScript 框架">
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
+                        src="https://cn.vuejs.org/logo.svg">
+                    <span class="wrap">vue3</span>
                 </a>
-                <a target="_blank" href="https://react.docschina.org/" class="item-link text-overflow svelte-1kgta4e"
-                    title="用于构建用户界面的 JavaScript 库"><img data-src="https://react.docschina.org/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://react.docschina.org/favicon.ico"> <span
-                        class="svelte-1kgta4e">react</span>
-                </a><a target="_blank" href="https://www.react-native.cn/"
-                    class="item-link text-overflow svelte-1kgta4e" title="一次学习，随处编写"><img
-                        data-src="https://react.docschina.org/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://react.docschina.org/favicon.ico"> <span class="svelte-1kgta4e">react-native</span>
+                <a target="_blank" href="https://react.docschina.org/" class="item-link text-overflow wrap"
+                    title="用于构建用户界面的 JavaScript 库">
+                    <img data-src="https://react.docschina.org/favicon.ico" alt="" class="wrap"
+                        src="https://react.docschina.org/favicon.ico">
+                    <span class="wrap">react</span>
+                </a><a target="_blank" href="https://www.react-native.cn/" class="item-link text-overflow wrap"
+                    title="一次学习，随处编写">
+                    <img data-src="https://react.docschina.org/favicon.ico" alt="" class="wrap"
+                        src="https://react.docschina.org/favicon.ico">
+                    <span class="wrap">react-native</span>
                 </a>
-                <a target="_blank" href="https://umijs.org/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg" alt=""
-                        class="svelte-1kgta4e" src="https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg">
-                    <span class="svelte-1kgta4e">UmiJs</span>
+                <a target="_blank" href="https://umijs.org/" class="item-link text-overflow wrap">
+                    <img data-src="https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg" alt="" class="wrap"
+                        src="https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg">
+                    <span class="wrap">UmiJs</span>
                 </a>
-                <a target="_blank" href="https://www.nextjs.cn/" class="item-link text-overflow svelte-1kgta4e"
-                    title="这是一个用于 生产环境的 React 框架"><img data-src="https://www.nextjs.cn/static/favicon/favicon.ico"
-                        alt="" class="svelte-1kgta4e" src="https://www.nextjs.cn/static/favicon/favicon.ico"> <span
-                        class="svelte-1kgta4e">nextJs</span>
+                <a target="_blank" href="https://www.nextjs.cn/" class="item-link text-overflow wrap"
+                    title="这是一个用于 生产环境的 React 框架">
+                    <img data-src="https://www.nextjs.cn/static/favicon/favicon.ico" alt="" class="wrap"
+                        src="https://www.nextjs.cn/static/favicon/favicon.ico">
+                    <span class="wrap">nextJs</span>
                 </a>
-                <a target="_blank" href="https://angular.cn/" class="item-link text-overflow svelte-1kgta4e"
-                    title="现代 Web 开发平台"><img data-src="https://angular.cn/assets/images/favicons/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://angular.cn/assets/images/favicons/favicon.ico"> <span
-                        class="svelte-1kgta4e">angular</span>
+                <a target="_blank" href="https://angular.cn/" class="item-link text-overflow wrap" title="现代 Web 开发平台">
+                    <img data-src="https://angular.cn/assets/images/favicons/favicon.ico" alt="" class="wrap"
+                        src="https://angular.cn/assets/images/favicons/favicon.ico">
+                    <span class="wrap">angular</span>
                 </a>
-                <a target="_blank" href="https://www.sveltejs.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.sveltejs.cn/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.sveltejs.cn/favicon.png"> <span class="svelte-1kgta4e">svelte</span>
+                <a target="_blank" href="https://www.sveltejs.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.sveltejs.cn/favicon.png" alt="" class="wrap"
+                        src="https://www.sveltejs.cn/favicon.png">
+                    <span class="wrap">svelte</span>
                 </a>
-                <a target="_blank" href="https://www.solidjs.cn/" class="item-link text-overflow svelte-1kgta4e"
-                    title="一个用于构建用户界面，简单高效、性能卓越的JavaScript库"><img
-                        data-src="https://www.solidjs.cn/img/favicons/favicon-32x32.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.solidjs.cn/img/favicons/favicon-32x32.png"> <span
-                        class="svelte-1kgta4e">solid</span>
+                <a target="_blank" href="https://www.solidjs.cn/" class="item-link text-overflow wrap"
+                    title="一个用于构建用户界面，简单高效、性能卓越的JavaScript库">
+                    <img data-src="https://www.solidjs.cn/img/favicons/favicon-32x32.png" alt="" class="wrap"
+                        src="https://www.solidjs.cn/img/favicons/favicon-32x32.png">
+                    <span class="wrap">solid</span>
                 </a>
-                <a target="_blank" href="https://uniapp.dcloud.io/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-a90b5f95-90ba-4d30-a6a7-cd4d057327db/d23e842c-58fc-4574-998d-17fdc7811cc3.png?v=1556263038788"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://uniapp.dcloud.io/" class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-a90b5f95-90ba-4d30-a6a7-cd4d057327db/d23e842c-58fc-4574-998d-17fdc7811cc3.png?v=1556263038788"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-a90b5f95-90ba-4d30-a6a7-cd4d057327db/d23e842c-58fc-4574-998d-17fdc7811cc3.png?v=1556263038788">
-                    <span class="svelte-1kgta4e">uniapp</span>
+
+                    <span class="wrap">uniapp</span>
                 </a>
-                <a target="_blank" href="https://www.expressjs.com.cn/" class="item-link text-overflow svelte-1kgta4e"
-                    title="基于 Node.js 平台，快速、开放、极简的 Web 开发框架"><img
-                        data-src="https://www.expressjs.com.cn/images/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.expressjs.com.cn/images/favicon.png"> <span
-                        class="svelte-1kgta4e">express</span>
+                <a target="_blank" href="https://www.expressjs.com.cn/" class="item-link text-overflow wrap"
+                    title="基于 Node.js 平台，快速、开放、极简的 Web 开发框架">
+                    <img data-src="https://www.expressjs.com.cn/images/favicon.png" alt="" class="wrap"
+                        src="https://www.expressjs.com.cn/images/favicon.png">
+                    <span class="wrap">express</span>
                 </a>
-                <a target="_blank" href="https://eggjs.org/zh-cn/" class="item-link text-overflow svelte-1kgta4e"
-                    title="为企业级框架和应用而生"><img data-src="https://www.eggjs.org/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.eggjs.org/favicon.png"> <span class="svelte-1kgta4e">egg</span>
-                </a><a target="_blank" href="https://www.koajs.com.cn/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/916e2040-8b90-43e9-9a13-e5d13caca955.svg"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://eggjs.org/zh-cn/" class="item-link text-overflow wrap"
+                    title="为企业级框架和应用而生">
+                    <img data-src="https://www.eggjs.org/favicon.png" alt="" class="wrap"
+                        src="https://www.eggjs.org/favicon.png">
+                    <span class="wrap">egg</span>
+                </a><a target="_blank" href="https://www.koajs.com.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/916e2040-8b90-43e9-9a13-e5d13caca955.svg"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/916e2040-8b90-43e9-9a13-e5d13caca955.svg">
-                    <span class="svelte-1kgta4e">koa</span>
+
+                    <span class="wrap">koa</span>
                 </a>
-                <a target="_blank" href="http://www.electronjs.org/" class="item-link text-overflow svelte-1kgta4e"
-                    title="使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/3a4b29b5-8cf3-4752-b556-8de809d61f78.ico"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="http://www.electronjs.org/" class="item-link text-overflow wrap"
+                    title="使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/3a4b29b5-8cf3-4752-b556-8de809d61f78.ico"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/3a4b29b5-8cf3-4752-b556-8de809d61f78.ico">
-                    <span class="svelte-1kgta4e">electron</span>
+
+                    <span class="wrap">electron</span>
                 </a>
-                <a target="_blank" href="https://tauri.app/zh/" class="item-link text-overflow svelte-1kgta4e"
-                    title="为多平台部署构建一个优化、安全和前端独立的应用。"><img data-src="https://tauri.app/zh/meta/favicon-32x32.png" alt=""
-                        class="svelte-1kgta4e" src="https://tauri.app/zh/meta/favicon-32x32.png"> <span
-                        class="svelte-1kgta4e">tauri</span>
+                <a target="_blank" href="https://tauri.app/zh/" class="item-link text-overflow wrap"
+                    title="为多平台部署构建一个优化、安全和前端独立的应用。">
+                    <img data-src="https://tauri.app/zh/meta/favicon-32x32.png" alt="" class="wrap"
+                        src="https://tauri.app/zh/meta/favicon-32x32.png">
+                    <span class="wrap">tauri</span>
                 </a>
                 <a target="_blank" href="https://developers.weixin.qq.com/miniprogram/dev/framework/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico" alt="" class="svelte-1kgta4e"
-                        src="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico"> <span
-                        class="svelte-1kgta4e">微信小程序</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico" alt="" class="wrap"
+                        src="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
+                    <span class="wrap">微信小程序</span>
                 </a>
-                <a target="_blank" href="http://taro-docs.jd.com/taro/docs/README"
-                    class="item-link text-overflow svelte-1kgta4e" title="一个开放式跨端跨框架解决方案"><img
-                        data-src="https://taro-docs.jd.com/taro/img/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://taro-docs.jd.com/taro/img/favicon.ico"> <span class="svelte-1kgta4e">Taro</span>
+                <a target="_blank" href="http://taro-docs.jd.com/taro/docs/README" class="item-link text-overflow wrap"
+                    title="一个开放式跨端跨框架解决方案">
+                    <img data-src="https://taro-docs.jd.com/taro/img/favicon.ico" alt="" class="wrap"
+                        src="https://taro-docs.jd.com/taro/img/favicon.ico">
+                    <span class="wrap">Taro</span>
                 </a>
-                <a target="_blank" href="https://www.nuxtjs.cn/" class="item-link text-overflow svelte-1kgta4e"
-                    title="使用简便的Vue 框架"><img data-src="https://www.nuxtjs.cn/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.nuxtjs.cn/favicon.ico"> <span class="svelte-1kgta4e">nuxtJs</span>
-                </a><a target="_blank" href="https://vuepress.vuejs.org/zh/"
-                    class="item-link text-overflow svelte-1kgta4e" title="Vue 驱动的静态网站生成器"><img
-                        data-src="https://cn.vuejs.org/logo.svg" alt="" class="svelte-1kgta4e"
-                        src="https://cn.vuejs.org/logo.svg"> <span class="svelte-1kgta4e">vuePress</span>
-                </a><a target="_blank" href="https://flutterchina.club/" class="item-link text-overflow svelte-1kgta4e"
-                    title="极速构建漂亮的原生应用"><img data-src="https://doc.flutterchina.club/images/favicon.png" alt=""
-                        class="svelte-1kgta4e" src="https://doc.flutterchina.club/images/favicon.png"> <span
-                        class="svelte-1kgta4e">flutter</span>
+                <a target="_blank" href="https://www.nuxtjs.cn/" class="item-link text-overflow wrap"
+                    title="使用简便的Vue 框架">
+                    <img data-src="https://www.nuxtjs.cn/favicon.ico" alt="" class="wrap"
+                        src="https://www.nuxtjs.cn/favicon.ico">
+                    <span class="wrap">nuxtJs</span>
+                </a><a target="_blank" href="https://vuepress.vuejs.org/zh/" class="item-link text-overflow wrap"
+                    title="Vue 驱动的静态网站生成器">
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
+                        src="https://cn.vuejs.org/logo.svg">
+                    <span class="wrap">vuePress</span>
+                </a><a target="_blank" href="https://flutterchina.club/" class="item-link text-overflow wrap"
+                    title="极速构建漂亮的原生应用">
+                    <img data-src="https://doc.flutterchina.club/images/favicon.png" alt="" class="wrap"
+                        src="https://doc.flutterchina.club/images/favicon.png">
+                    <span class="wrap">flutter</span>
                 </a>
-                <a target="_blank" href="https://zeroing.jd.com/micro-app/"
-                    class="item-link text-overflow svelte-1kgta4e" title="一款轻量、高效、功能强大的微前端框架"><img
-                        data-src="https://zeroing.jd.com/micro-app/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://zeroing.jd.com/micro-app/favicon.ico"> <span class="svelte-1kgta4e">MicroApp</span>
+                <a target="_blank" href="https://zeroing.jd.com/micro-app/" class="item-link text-overflow wrap"
+                    title="一款轻量、高效、功能强大的微前端框架">
+                    <img data-src="https://zeroing.jd.com/micro-app/favicon.ico" alt="" class="wrap"
+                        src="https://zeroing.jd.com/micro-app/favicon.ico">
+                    <span class="wrap">MicroApp</span>
                 </a>
-                <a target="_blank" href="https://qiankun.umijs.org/zh" class="item-link text-overflow svelte-1kgta4e"
-                    title="可能是你见过最完善的微前端解决方案🧐"><img
-                        data-src="https://gw.alipayobjects.com/mdn/rms_655822/afts/img/A*4sIUQpcos_gAAAAAAAAAAAAAARQnAQ"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://qiankun.umijs.org/zh" class="item-link text-overflow wrap"
+                    title="可能是你见过最完善的微前端解决方案🧐">
+                    <img data-src="https://gw.alipayobjects.com/mdn/rms_655822/afts/img/A*4sIUQpcos_gAAAAAAAAAAAAAARQnAQ"
+                        alt="" class="wrap"
                         src="https://gw.alipayobjects.com/mdn/rms_655822/afts/img/A*4sIUQpcos_gAAAAAAAAAAAAAARQnAQ">
-                    <span class="svelte-1kgta4e">qiankun</span>
+
+                    <span class="wrap">qiankun</span>
                 </a>
-                <a target="_blank" href="https://lit.dev/" class="item-link text-overflow svelte-1kgta4e"
-                    title="简单的、快速地、网络组件。"><img data-src="https://lit.dev/images/flame-favicon.svg" alt=""
-                        class="svelte-1kgta4e" src="https://lit.dev/images/flame-favicon.svg"> <span
-                        class="svelte-1kgta4e">lit</span>
+                <a target="_blank" href="https://lit.dev/" class="item-link text-overflow wrap" title="简单的、快速地、网络组件。">
+                    <img data-src="https://lit.dev/images/flame-favicon.svg" alt="" class="wrap"
+                        src="https://lit.dev/images/flame-favicon.svg">
+                    <span class="wrap">lit</span>
+                </a>
+                <a target="_blank" href="https://stenciljs.com/" class="item-link text-overflow wrap"
+                    title="Stencil is a toolchain for building reusable, scalable Design Systems. Generate small, blazing fast, and 100% standards based Web Components that run in every browser.">
+                    <img data-src="https://stenciljs.com/assets/img/icon.png" alt="" class="wrap"
+                        src="https://stenciljs.com/assets/img/icon.png">
+                    <span class="wrap">stenciljs</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="chartFrame">
-            <h3 class="svelte-1kgta4e">可视化图表库</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://echarts.apache.org/zh/index.html"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/e901f8e8-e500-4fcc-a153-ebfe6dfe77d0.png"
-                        alt="" class="svelte-1kgta4e"
+        <div class="list wrap" id="chartFrame">
+            <h3 class="wrap">可视化图表库</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://echarts.apache.org/zh/index.html" class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/e901f8e8-e500-4fcc-a153-ebfe6dfe77d0.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/e901f8e8-e500-4fcc-a153-ebfe6dfe77d0.png">
-                    <span class="svelte-1kgta4e">echarts</span>
+
+                    <span class="wrap">echarts</span>
                 </a>
-                <a target="_blank" href="https://www.highcharts.com/docs/index"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.highcharts.com/docs/img/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.highcharts.com/docs/img/favicon.png"> <span
-                        class="svelte-1kgta4e">highcharts</span>
+                <a target="_blank" href="https://www.highcharts.com/docs/index" class="item-link text-overflow wrap">
+                    <img data-src="https://www.highcharts.com/docs/img/favicon.png" alt="" class="wrap"
+                        src="https://www.highcharts.com/docs/img/favicon.png">
+                    <span class="wrap">highcharts</span>
                 </a>
-                <a target="_blank" href="https://antv.vision/zh" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/4bf0d9f5-65b7-43c6-9735-e3523ef9c3ef.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://antv.vision/zh" class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/4bf0d9f5-65b7-43c6-9735-e3523ef9c3ef.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/4bf0d9f5-65b7-43c6-9735-e3523ef9c3ef.png">
-                    <span class="svelte-1kgta4e">antv</span>
+
+                    <span class="wrap">antv</span>
                 </a>
-                <a target="_blank" href="https://d3js.org/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://d3js.org/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://d3js.org/favicon.png"> <span class="svelte-1kgta4e">d3</span>
+                <a target="_blank" href="https://d3js.org/" class="item-link text-overflow wrap">
+                    <img data-src="https://d3js.org/favicon.png" alt="" class="wrap" src="https://d3js.org/favicon.png">
+                    <span class="wrap">d3</span>
                 </a>
-                <a target="_blank" href="https://threejs.org/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://threejs.org/files/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://threejs.org/files/favicon.ico"> <span class="svelte-1kgta4e">threejs</span>
+                <a target="_blank" href="https://threejs.org/" class="item-link text-overflow wrap">
+                    <img data-src="https://threejs.org/files/favicon.ico" alt="" class="wrap"
+                        src="https://threejs.org/files/favicon.ico">
+                    <span class="wrap">threejs</span>
                 </a>
-                <a target="_blank" href="http://fabricjs.com/" class="item-link text-overflow svelte-1kgta4e"
-                    title="是一个强大而简单的 Javascript HTML5 画布库"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/2887e2e7-5ec7-4c79-aaef-8150aa86980c.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="http://fabricjs.com/" class="item-link text-overflow wrap"
+                    title="是一个强大而简单的 Javascript HTML5 画布库">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/2887e2e7-5ec7-4c79-aaef-8150aa86980c.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/2887e2e7-5ec7-4c79-aaef-8150aa86980c.png">
-                    <span class="svelte-1kgta4e">fabricjs</span>
+
+                    <span class="wrap">fabricjs</span>
                 </a>
-                <a target="_blank" href="https://apexcharts.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://apexcharts.com/wp-content/themes/apexcharts/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://apexcharts.com/wp-content/themes/apexcharts/favicon.ico">
-                    <span class="svelte-1kgta4e">ApexCharts</span>
+                <a target="_blank" href="https://apexcharts.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://apexcharts.com/wp-content/themes/apexcharts/favicon.ico" alt="" class="wrap"
+                        src="https://apexcharts.com/wp-content/themes/apexcharts/favicon.ico">
+
+                    <span class="wrap">ApexCharts</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="Design">
-            <h3 class="svelte-1kgta4e">设计</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://www.uisdc.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.uisdc.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.uisdc.com/favicon.ico"> <span class="svelte-1kgta4e">优设网</span>
+        <div class="list wrap" id="Design">
+            <h3 class="wrap">设计</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://www.uisdc.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.uisdc.com/favicon.ico" alt="" class="wrap"
+                        src="https://www.uisdc.com/favicon.ico">
+                    <span class="wrap">优设网</span>
                 </a>
-                <a target="_blank" href="https://www.ui.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.ui.cn/Public/img/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.ui.cn/Public/img/favicon.ico"> <span class="svelte-1kgta4e">UI中国</span>
-                </a><a target="_blank" href="https://www.zcool.com.cn/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://static.zcool.cn/git_z/z/site/favicon.ico?version=1644228200344" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://static.zcool.cn/git_z/z/site/favicon.ico?version=1644228200344">
-                    <span class="svelte-1kgta4e">站酷</span>
+                <a target="_blank" href="https://www.ui.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.ui.cn/Public/img/favicon.ico" alt="" class="wrap"
+                        src="https://www.ui.cn/Public/img/favicon.ico">
+                    <span class="wrap">UI中国</span>
+                </a><a target="_blank" href="https://www.zcool.com.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://static.zcool.cn/git_z/z/site/favicon.ico?version=1644228200344" alt=""
+                        class="wrap" src="https://static.zcool.cn/git_z/z/site/favicon.ico?version=1644228200344">
+
+                    <span class="wrap">站酷</span>
                 </a>
-                <a target="_blank" href="https://huaban.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://huaban.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://huaban.com/favicon.ico"> <span class="svelte-1kgta4e">花瓣</span>
+                <a target="_blank" href="https://huaban.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://huaban.com/favicon.ico" alt="" class="wrap"
+                        src="https://huaban.com/favicon.ico">
+                    <span class="wrap">花瓣</span>
                 </a>
-                <a target="_blank" href="https://www.meiye.art/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://icon.meiye.art/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://icon.meiye.art/favicon.ico"> <span class="svelte-1kgta4e">美叶</span>
+                <a target="_blank" href="https://www.meiye.art/" class="item-link text-overflow wrap">
+                    <img data-src="https://icon.meiye.art/favicon.ico" alt="" class="wrap"
+                        src="https://icon.meiye.art/favicon.ico">
+                    <span class="wrap">美叶</span>
                 </a>
-                <a target="_blank" href="https://www.51yuansu.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.51yuansu.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.51yuansu.com/favicon.ico"> <span class="svelte-1kgta4e">觅元素</span>
+                <a target="_blank" href="https://www.51yuansu.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.51yuansu.com/favicon.ico" alt="" class="wrap"
+                        src="https://www.51yuansu.com/favicon.ico">
+                    <span class="wrap">觅元素</span>
                 </a>
-                <a target="_blank" href="http://www.qijishow.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.qijishow.com/img/ico.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.qijishow.com/img/ico.ico"> <span class="svelte-1kgta4e">奇迹秀</span>
+                <a target="_blank" href="http://www.qijishow.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.qijishow.com/img/ico.ico" alt="" class="wrap"
+                        src="https://www.qijishow.com/img/ico.ico">
+                    <span class="wrap">奇迹秀</span>
                 </a>
                 <a target="_blank" href="https://cn.spline.design/learning-community"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://super-static-assets.s3.amazonaws.com/266a4be2-7da9-4794-9ed0-4c4c28f12a49/images/a482e888-17a9-4e61-8e6c-d890947d51b9.png"
-                        alt="" class="svelte-1kgta4e"
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://super-static-assets.s3.amazonaws.com/266a4be2-7da9-4794-9ed0-4c4c28f12a49/images/a482e888-17a9-4e61-8e6c-d890947d51b9.png"
+                        alt="" class="wrap"
                         src="https://super-static-assets.s3.amazonaws.com/266a4be2-7da9-4794-9ed0-4c4c28f12a49/images/a482e888-17a9-4e61-8e6c-d890947d51b9.png">
-                    <span class="svelte-1kgta4e">Spline</span>
+
+                    <span class="wrap">Spline</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="Icon">
-            <h3 class="svelte-1kgta4e">图标</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://www.iconfont.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://img.alicdn.com/imgextra/i2/O1CN01ZyAlrn1MwaMhqz36G_!!6000000001499-73-tps-64-64.ico"
-                        alt="" class="svelte-1kgta4e"
+        <div class="list wrap" id="Icon">
+            <h3 class="wrap">图标</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://www.iconfont.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://img.alicdn.com/imgextra/i2/O1CN01ZyAlrn1MwaMhqz36G_!!6000000001499-73-tps-64-64.ico"
+                        alt="" class="wrap"
                         src="https://img.alicdn.com/imgextra/i2/O1CN01ZyAlrn1MwaMhqz36G_!!6000000001499-73-tps-64-64.ico">
-                    <span class="svelte-1kgta4e">iconfont</span>
+
+                    <span class="wrap">iconfont</span>
                 </a>
-                <a target="_blank" href="https://fontawesome.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://fontawesome.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://fontawesome.com/favicon.ico"> <span class="svelte-1kgta4e">fontawesome</span>
+                <a target="_blank" href="https://fontawesome.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://fontawesome.com/favicon.ico" alt="" class="wrap"
+                        src="https://fontawesome.com/favicon.ico">
+                    <span class="wrap">fontawesome</span>
                 </a>
-                <a target="_blank" href="https://icomoon.io/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://icomoon.io/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://icomoon.io/favicon.ico"> <span class="svelte-1kgta4e">icomoon</span>
+                <a target="_blank" href="https://icomoon.io/" class="item-link text-overflow wrap">
+                    <img data-src="https://icomoon.io/favicon.ico" alt="" class="wrap"
+                        src="https://icomoon.io/favicon.ico">
+                    <span class="wrap">icomoon</span>
                 </a>
-                <a target="_blank" href="https://icons.mono.company/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://icons.mono.company/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://icons.mono.company/favicon.ico"> <span class="svelte-1kgta4e">icomoon</span>
+                <a target="_blank" href="https://icons.mono.company/" class="item-link text-overflow wrap">
+                    <img data-src="https://icons.mono.company/favicon.ico" alt="" class="wrap"
+                        src="https://icons.mono.company/favicon.ico">
+                    <span class="wrap">icomoon</span>
                 </a><a target="_blank" href="https://iconpark.oceanengine.com/official"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg" alt=""
-                        class="svelte-1kgta4e" src="https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg">
-                    <span class="svelte-1kgta4e">iconPark</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg" alt=""
+                        class="wrap" src="https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg">
+
+                    <span class="wrap">iconPark</span>
                 </a>
-                <a target="_blank" href="https://arco.design/iconbox/libs"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://unpkg.byted-static.com/byted/arco-config/1.0.9/assets/icon-box.ico" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://unpkg.byted-static.com/byted/arco-config/1.0.9/assets/icon-box.ico"> <span
-                        class="svelte-1kgta4e">iconBox</span>
+                <a target="_blank" href="https://arco.design/iconbox/libs" class="item-link text-overflow wrap">
+                    <img data-src="https://unpkg.byted-static.com/byted/arco-config/1.0.9/assets/icon-box.ico" alt=""
+                        class="wrap" src="https://unpkg.byted-static.com/byted/arco-config/1.0.9/assets/icon-box.ico">
+                    <span class="wrap">iconBox</span>
                 </a>
-                <a target="_blank" href="https://www.fonts.net.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.fonts.net.cn/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.fonts.net.cn/favicon.ico"> <span class="svelte-1kgta4e">字体天下</span>
+                <a target="_blank" href="https://www.fonts.net.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.fonts.net.cn/favicon.ico" alt="" class="wrap"
+                        src="https://www.fonts.net.cn/favicon.ico">
+                    <span class="wrap">字体天下</span>
                 </a>
-                <a target="_blank" href="https://www.emojiall.com/zh-hans"
-                    class="item-link text-overflow svelte-1kgta4e" title="emoji中文网"><img
-                        data-src="https://www.emojiall.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.emojiall.com/favicon.ico"> <span class="svelte-1kgta4e">emojiall</span>
-                </a><a target="_blank" href="https://icons.bootcss.com/" class="item-link text-overflow svelte-1kgta4e"
-                    title="Bootstrap 官方图标库"><img
-                        data-src="https://v5.bootcss.com/docs/5.1/assets/img/favicons/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://v5.bootcss.com/docs/5.1/assets/img/favicons/favicon.ico">
-                    <span class="svelte-1kgta4e">bootstrap-icons</span>
+                <a target="_blank" href="https://www.emojiall.com/zh-hans" class="item-link text-overflow wrap"
+                    title="emoji中文网">
+                    <img data-src="https://www.emojiall.com/favicon.ico" alt="" class="wrap"
+                        src="https://www.emojiall.com/favicon.ico">
+                    <span class="wrap">emojiall</span>
+                </a><a target="_blank" href="https://icons.bootcss.com/" class="item-link text-overflow wrap"
+                    title="Bootstrap 官方图标库">
+                    <img data-src="https://v5.bootcss.com/docs/5.1/assets/img/favicons/favicon.ico" alt="" class="wrap"
+                        src="https://v5.bootcss.com/docs/5.1/assets/img/favicons/favicon.ico">
+
+                    <span class="wrap">bootstrap-icons</span>
                 </a>
-                <a target="_blank" href="https://www.xicons.org/#/zh-CN"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/edff8684-32c4-4023-a632-4b8cfb65a5fe.svg"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.xicons.org/#/zh-CN" class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/edff8684-32c4-4023-a632-4b8cfb65a5fe.svg"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/edff8684-32c4-4023-a632-4b8cfb65a5fe.svg">
-                    <span class="svelte-1kgta4e">xicons</span>
+
+                    <span class="wrap">xicons</span>
                 </a>
-                <a target="_blank" href="https://www.googlefonts.cn/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.googlefonts.cn/Public/google/zh-cn/gstatic/google_fonts_lodp.ico" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://www.googlefonts.cn/Public/google/zh-cn/gstatic/google_fonts_lodp.ico"> <span
-                        class="svelte-1kgta4e">googlefonts</span>
+                <a target="_blank" href="https://www.googlefonts.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.googlefonts.cn/Public/google/zh-cn/gstatic/google_fonts_lodp.ico" alt=""
+                        class="wrap" src="https://www.googlefonts.cn/Public/google/zh-cn/gstatic/google_fonts_lodp.ico">
+                    <span class="wrap">googlefonts</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="algorithm">
-            <h3 class="svelte-1kgta4e">算法</h3>
-            <div class="list-item svelte-1kgta4e">
+        <div class="list wrap" id="algorithm">
+            <h3 class="wrap">算法</h3>
+            <div class="list-item wrap">
                 <a target="_blank" href="https://eveningwater.github.io/to-offer/#/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.eveningwater.com/static/image/icon.jpg" alt="" class="svelte-1kgta4e"
-                        src="https://www.eveningwater.com/static/image/icon.jpg"> <span
-                        class="svelte-1kgta4e">剑指offer算法题</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://www.eveningwater.com/static/image/icon.jpg" alt="" class="wrap"
+                        src="https://www.eveningwater.com/static/image/icon.jpg">
+                    <span class="wrap">剑指offer算法题</span>
                 </a>
-                <a target="_blank" href="https://books.halfrost.com/leetcode/"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://leetcode.cn/favicon.ico"
-                        alt="" class="svelte-1kgta4e" src="https://leetcode.cn/favicon.ico"> <span
-                        class="svelte-1kgta4e">leetcode</span>
+                <a target="_blank" href="https://books.halfrost.com/leetcode/" class="item-link text-overflow wrap">
+                    <img data-src="https://leetcode.cn/favicon.ico" alt="" class="wrap"
+                        src="https://leetcode.cn/favicon.ico">
+                    <span class="wrap">leetcode</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="language">
-            <h3 class="svelte-1kgta4e">语言</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://nodejs.org/zh-cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://nodejs.org/static/images/favicons/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://nodejs.org/static/images/favicons/favicon.ico"> <span
-                        class="svelte-1kgta4e">node</span>
+        <div class="list wrap" id="language">
+            <h3 class="wrap">语言</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://nodejs.org/zh-cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://nodejs.org/static/images/favicons/favicon.ico" alt="" class="wrap"
+                        src="https://nodejs.org/static/images/favicons/favicon.ico">
+                    <span class="wrap">node</span>
                 </a>
-                <a target="_blank" href="https://www.tslang.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.tslang.cn/assets/images/icons/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.tslang.cn/assets/images/icons/favicon.ico"> <span
-                        class="svelte-1kgta4e">Typescript</span>
+                <a target="_blank" href="https://www.tslang.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.tslang.cn/assets/images/icons/favicon.ico" alt="" class="wrap"
+                        src="https://www.tslang.cn/assets/images/icons/favicon.ico">
+                    <span class="wrap">Typescript</span>
                 </a>
-                <a target="_blank" href="https://www.sass.hk/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.sass.hk/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.sass.hk/favicon.ico"> <span class="svelte-1kgta4e">sass</span>
+                <a target="_blank" href="https://www.sass.hk/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.sass.hk/favicon.ico" alt="" class="wrap"
+                        src="https://www.sass.hk/favicon.ico">
+                    <span class="wrap">sass</span>
                 </a>
-                <a target="_blank" href="https://less.bootcss.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://less.bootcss.com/public/ico/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://less.bootcss.com/public/ico/favicon.ico"> <span class="svelte-1kgta4e">less</span>
+                <a target="_blank" href="https://less.bootcss.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://less.bootcss.com/public/ico/favicon.ico" alt="" class="wrap"
+                        src="https://less.bootcss.com/public/ico/favicon.ico">
+                    <span class="wrap">less</span>
                 </a>
-                <a target="_blank" href="https://www.stylus-lang.cn/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.stylus-lang.cn/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.stylus-lang.cn/favicon.ico"> <span class="svelte-1kgta4e">stylus</span>
-                </a><a target="_blank" href="https://git-scm.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://git-scm.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://git-scm.com/favicon.ico"> <span class="svelte-1kgta4e">git</span>
+                <a target="_blank" href="https://www.stylus-lang.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.stylus-lang.cn/favicon.ico" alt="" class="wrap"
+                        src="https://www.stylus-lang.cn/favicon.ico">
+                    <span class="wrap">stylus</span>
+                </a><a target="_blank" href="https://git-scm.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://git-scm.com/favicon.ico" alt="" class="wrap"
+                        src="https://git-scm.com/favicon.ico">
+                    <span class="wrap">git</span>
                 </a><a target="_blank" href="https://www.dartcn.com/guides/language/language-tour#rune"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.dartcn.com/assets/shared/dart/icon/64.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.dartcn.com/assets/shared/dart/icon/64.png"> <span
-                        class="svelte-1kgta4e">dart</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://www.dartcn.com/assets/shared/dart/icon/64.png" alt="" class="wrap"
+                        src="https://www.dartcn.com/assets/shared/dart/icon/64.png">
+                    <span class="wrap">dart</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="collaborativeOffice">
-            <h3 class="svelte-1kgta4e">协同办公</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://www.yuque.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://gw.alipayobjects.com/zos/rmsportal/UTjFYEzMSYVwzxIGVhMu.png" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://gw.alipayobjects.com/zos/rmsportal/UTjFYEzMSYVwzxIGVhMu.png">
-                    <span class="svelte-1kgta4e">语雀</span>
+        <div class="list wrap" id="collaborativeOffice">
+            <h3 class="wrap">协同办公</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://www.yuque.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://gw.alipayobjects.com/zos/rmsportal/UTjFYEzMSYVwzxIGVhMu.png" alt=""
+                        class="wrap" src="https://gw.alipayobjects.com/zos/rmsportal/UTjFYEzMSYVwzxIGVhMu.png">
+
+                    <span class="wrap">语雀</span>
                 </a>
-                <a target="_blank" href="https://note.youdao.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://note.youdao.com/favicon.ico?v=2" alt="" class="svelte-1kgta4e"
-                        src="https://note.youdao.com/favicon.ico?v=2"> <span class="svelte-1kgta4e">有道云</span>
-                </a><a target="_blank" href="https://shimo.im/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://assets.shimonote.com/from_qbox/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://assets.shimonote.com/from_qbox/favicon.ico"> <span
-                        class="svelte-1kgta4e">石墨文档</span>
+                <a target="_blank" href="https://note.youdao.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://note.youdao.com/favicon.ico?v=2" alt="" class="wrap"
+                        src="https://note.youdao.com/favicon.ico?v=2">
+                    <span class="wrap">有道云</span>
+                </a><a target="_blank" href="https://shimo.im/" class="item-link text-overflow wrap">
+                    <img data-src="https://assets.shimonote.com/from_qbox/favicon.ico" alt="" class="wrap"
+                        src="https://assets.shimonote.com/from_qbox/favicon.ico">
+                    <span class="wrap">石墨文档</span>
                 </a>
-                <a target="_blank" href="https://modao.cc/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://images.modao.cc/images/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://images.modao.cc/images/favicon.ico"> <span class="svelte-1kgta4e">墨刀</span>
-                </a><a target="_blank" href="https://www.baklib.com/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://saas.bk-cdn.com/193ddf40-81f3-453a-8527-4537633827a5/icon11590542409650.png"
-                        alt="" class="svelte-1kgta4e"
-                        src="https://saas.bk-cdn.com/193ddf40-81f3-453a-8527-4537633827a5/icon11590542409650.png"> <span
-                        class="svelte-1kgta4e">baklib</span>
+                <a target="_blank" href="https://modao.cc/" class="item-link text-overflow wrap">
+                    <img data-src="https://images.modao.cc/images/favicon.ico" alt="" class="wrap"
+                        src="https://images.modao.cc/images/favicon.ico">
+                    <span class="wrap">墨刀</span>
+                </a><a target="_blank" href="https://www.baklib.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://saas.bk-cdn.com/193ddf40-81f3-453a-8527-4537633827a5/icon11590542409650.png"
+                        alt="" class="wrap"
+                        src="https://saas.bk-cdn.com/193ddf40-81f3-453a-8527-4537633827a5/icon11590542409650.png">
+                    <span class="wrap">baklib</span>
                 </a>
-                <a target="_blank" href="https://doc.weiyun.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://img.weiyun.com/vipstyle/nr/box/img/favicon.ico?max_age=31536000" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://img.weiyun.com/vipstyle/nr/box/img/favicon.ico?max_age=31536000"> <span
-                        class="svelte-1kgta4e">微云文档</span>
+                <a target="_blank" href="https://doc.weiyun.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://img.weiyun.com/vipstyle/nr/box/img/favicon.ico?max_age=31536000" alt=""
+                        class="wrap" src="https://img.weiyun.com/vipstyle/nr/box/img/favicon.ico?max_age=31536000">
+                    <span class="wrap">微云文档</span>
                 </a>
-                <a target="_blank" href="https://pan.baidu.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://pan.baidu.com/m-static/base/static/images/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://pan.baidu.com/m-static/base/static/images/favicon.ico">
-                    <span class="svelte-1kgta4e">百度网盘</span>
+                <a target="_blank" href="https://pan.baidu.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://pan.baidu.com/m-static/base/static/images/favicon.ico" alt="" class="wrap"
+                        src="https://pan.baidu.com/m-static/base/static/images/favicon.ico">
+
+                    <span class="wrap">百度网盘</span>
                 </a>
-                <a target="_blank" href="https://www.aliyundrive.com/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://gw.alicdn.com/imgextra/i3/O1CN01aj9rdD1GS0E8io11t_!!6000000000620-73-tps-16-16.ico"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://www.aliyundrive.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://gw.alicdn.com/imgextra/i3/O1CN01aj9rdD1GS0E8io11t_!!6000000000620-73-tps-16-16.ico"
+                        alt="" class="wrap"
                         src="https://gw.alicdn.com/imgextra/i3/O1CN01aj9rdD1GS0E8io11t_!!6000000000620-73-tps-16-16.ico">
-                    <span class="svelte-1kgta4e">阿里云盘</span>
+
+                    <span class="wrap">阿里云盘</span>
                 </a>
-                <a target="_blank" href="https://www.wjx.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.wjx.cn/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.wjx.cn/favicon.ico"> <span class="svelte-1kgta4e">问卷星</span>
+                <a target="_blank" href="https://www.wjx.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.wjx.cn/favicon.ico" alt="" class="wrap"
+                        src="https://www.wjx.cn/favicon.ico">
+                    <span class="wrap">问卷星</span>
                 </a>
-                <a target="_blank" href="https://jinshuju.net/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://gd-assets.jinshujucdn.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://gd-assets.jinshujucdn.com/favicon.ico"> <span class="svelte-1kgta4e">金数据</span>
+                <a target="_blank" href="https://jinshuju.net/" class="item-link text-overflow wrap">
+                    <img data-src="https://gd-assets.jinshujucdn.com/favicon.ico" alt="" class="wrap"
+                        src="https://gd-assets.jinshujucdn.com/favicon.ico">
+                    <span class="wrap">金数据</span>
                 </a>
-                <a target="_blank" href="https://h5.bce.baidu.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://h5.bce.baidu.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://h5.bce.baidu.com/favicon.ico"> <span class="svelte-1kgta4e">百度H5</span>
+                <a target="_blank" href="https://h5.bce.baidu.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://h5.bce.baidu.com/favicon.ico" alt="" class="wrap"
+                        src="https://h5.bce.baidu.com/favicon.ico">
+                    <span class="wrap">百度H5</span>
                 </a>
-                <a target="_blank" href="https://www.tubiaoxiu.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.tubiaoxiu.com/landing/img/logo_small16.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.tubiaoxiu.com/landing/img/logo_small16.png"> <span
-                        class="svelte-1kgta4e">图表秀</span>
+                <a target="_blank" href="https://www.tubiaoxiu.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.tubiaoxiu.com/landing/img/logo_small16.png" alt="" class="wrap"
+                        src="https://www.tubiaoxiu.com/landing/img/logo_small16.png">
+                    <span class="wrap">图表秀</span>
                 </a>
-                <a target="_blank" href="https://web.baimiaoapp.com/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://xlimage.uzero.cn/shinescan/res/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://xlimage.uzero.cn/shinescan/res/favicon.ico"> <span class="svelte-1kgta4e">白猫</span>
+                <a target="_blank" href="https://web.baimiaoapp.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://xlimage.uzero.cn/shinescan/res/favicon.ico" alt="" class="wrap"
+                        src="https://xlimage.uzero.cn/shinescan/res/favicon.ico">
+                    <span class="wrap">白猫</span>
                 </a>
-                <a target="_blank" href="https://www.kdocs.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://qn.cache.wpscdn.cn/kdocs/mobile/touch/apple-152.png" alt=""
-                        class="svelte-1kgta4e" src="https://qn.cache.wpscdn.cn/kdocs/mobile/touch/apple-152.png"> <span
-                        class="svelte-1kgta4e">金山文档</span>
+                <a target="_blank" href="https://www.kdocs.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://qn.cache.wpscdn.cn/kdocs/mobile/touch/apple-152.png" alt="" class="wrap"
+                        src="https://qn.cache.wpscdn.cn/kdocs/mobile/touch/apple-152.png">
+                    <span class="wrap">金山文档</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="designTool">
-            <h3 class="svelte-1kgta4e">设计工具</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://www.figma.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://static.figma.com/app/icon/1/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://static.figma.com/app/icon/1/favicon.ico"> <span class="svelte-1kgta4e">figma</span>
+        <div class="list wrap" id="designTool">
+            <h3 class="wrap">设计工具</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://www.figma.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://static.figma.com/app/icon/1/favicon.ico" alt="" class="wrap"
+                        src="https://static.figma.com/app/icon/1/favicon.ico">
+                    <span class="wrap">figma</span>
                 </a>
-                <a target="_blank" href="https://mastergo.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://mastergo.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://mastergo.com/favicon.ico"> <span class="svelte-1kgta4e">masterGo</span>
+                <a target="_blank" href="https://mastergo.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://mastergo.com/favicon.ico" alt="" class="wrap"
+                        src="https://mastergo.com/favicon.ico">
+                    <span class="wrap">masterGo</span>
                 </a>
-                <a target="_blank" href="https://js.design/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://img.js.design/assets/webImg/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://img.js.design/assets/webImg/favicon.ico"> <span class="svelte-1kgta4e">即时设计</span>
+                <a target="_blank" href="https://js.design/" class="item-link text-overflow wrap">
+                    <img data-src="https://img.js.design/assets/webImg/favicon.ico" alt="" class="wrap"
+                        src="https://img.js.design/assets/webImg/favicon.ico">
+                    <span class="wrap">即时设计</span>
                 </a>
                 <a target="_blank" href="https://www.uisdc.com/category/hot-download/tools-download"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-1.png" alt=""
-                        class="svelte-1kgta4e" src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-1.png">
-                    <span class="svelte-1kgta4e">神器推荐专栏</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-1.png" alt=""
+                        class="wrap" src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-1.png">
+
+                    <span class="wrap">神器推荐专栏</span>
                 </a>
                 <a target="_blank" href="https://uiiiuiii.com/inspirations/featured/tool"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-2.png" alt=""
-                        class="svelte-1kgta4e" src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-2.png">
-                    <span class="svelte-1kgta4e">设计师神器</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-2.png" alt=""
+                        class="wrap" src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-2.png">
+
+                    <span class="wrap">设计师神器</span>
                 </a>
                 <a target="_blank"
                     href="https://ac.aliyun.com/application/webdesign/sumei?source=5176.11533457&amp;userCode=itzns7ko"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://image.uisdc.com/wp-content/uploads/2020/04/nav-aliyun-202018.png" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://image.uisdc.com/wp-content/uploads/2020/04/nav-aliyun-202018.png"> <span
-                        class="svelte-1kgta4e">阿里云建站神器</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://image.uisdc.com/wp-content/uploads/2020/04/nav-aliyun-202018.png" alt=""
+                        class="wrap" src="https://image.uisdc.com/wp-content/uploads/2020/04/nav-aliyun-202018.png">
+                    <span class="wrap">阿里云建站神器</span>
                 </a>
                 <a target="_blank" href="https://www.uisdc.com/ppt-artifact-islide"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-3.png" alt=""
-                        class="svelte-1kgta4e" src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-3.png">
-                    <span class="svelte-1kgta4e">PPT神器 iSlide</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-3.png" alt=""
+                        class="wrap" src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-3.png">
+
+                    <span class="wrap">PPT神器 iSlide</span>
                 </a>
-                <a target="_blank" href="https://jdrd.jd.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://image.uisdc.com/wp-content/uploads/2020/03/jdr-design-nav.png" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://image.uisdc.com/wp-content/uploads/2020/03/jdr-design-nav.png">
-                    <span class="svelte-1kgta4e">京东JDR Design</span>
+                <a target="_blank" href="https://jdrd.jd.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://image.uisdc.com/wp-content/uploads/2020/03/jdr-design-nav.png" alt=""
+                        class="wrap" src="https://image.uisdc.com/wp-content/uploads/2020/03/jdr-design-nav.png">
+
+                    <span class="wrap">京东JDR Design</span>
                 </a>
-                <a target="_blank" href="https://uiiiuiii.com/software/5103.html"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-6.png" alt=""
-                        class="svelte-1kgta4e" src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-6.png">
-                    <span class="svelte-1kgta4e">Adobe全家桶</span>
+                <a target="_blank" href="https://uiiiuiii.com/software/5103.html" class="item-link text-overflow wrap">
+                    <img data-src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-6.png" alt=""
+                        class="wrap" src="https://image.uisdc.com/wp-content/uploads/2018/08/sdcnav-9-6.png">
+
+                    <span class="wrap">Adobe全家桶</span>
                 </a>
-                <a target="_blank" href="https://www.epub360.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://image.uisdc.com/wp-content/uploads/2019/11/nav-1107-epub.png" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://image.uisdc.com/wp-content/uploads/2019/11/nav-1107-epub.png">
-                    <span class="svelte-1kgta4e">H5制作神器</span>
+                <a target="_blank" href="https://www.epub360.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://image.uisdc.com/wp-content/uploads/2019/11/nav-1107-epub.png" alt=""
+                        class="wrap" src="https://image.uisdc.com/wp-content/uploads/2019/11/nav-1107-epub.png">
+
+                    <span class="wrap">H5制作神器</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="buildTools">
-            <h3 class="svelte-1kgta4e">构建工具</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://www.npmjs.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" alt=""
-                        class="svelte-1kgta4e" src="https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png">
-                    <span class="svelte-1kgta4e">npm</span>
+        <div class="list wrap" id="buildTools">
+            <h3 class="wrap">构建工具</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://www.npmjs.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" alt="" class="wrap"
+                        src="https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png">
+
+                    <span class="wrap">npm</span>
                 </a>
-                <a target="_blank" href="https://www.yarnpkg.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.yarnpkg.cn/favicon-32x32.png?v=6143f50112ddba9fdb635b0af2f32aff" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://www.yarnpkg.cn/favicon-32x32.png?v=6143f50112ddba9fdb635b0af2f32aff"> <span
-                        class="svelte-1kgta4e">yarn</span>
+                <a target="_blank" href="https://www.yarnpkg.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.yarnpkg.cn/favicon-32x32.png?v=6143f50112ddba9fdb635b0af2f32aff" alt=""
+                        class="wrap" src="https://www.yarnpkg.cn/favicon-32x32.png?v=6143f50112ddba9fdb635b0af2f32aff">
+                    <span class="wrap">yarn</span>
                 </a>
-                <a target="_blank" href="https://pnpm.io/zh/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://d33wubrfki0l68.cloudfront.net/2f3acb83b7d2349f2194bc38c0f22f295908dc33/6a6e6/zh/img/pnpm-no-name-with-frame.svg"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://pnpm.io/zh/" class="item-link text-overflow wrap">
+                    <img data-src="https://d33wubrfki0l68.cloudfront.net/2f3acb83b7d2349f2194bc38c0f22f295908dc33/6a6e6/zh/img/pnpm-no-name-with-frame.svg"
+                        alt="" class="wrap"
                         src="https://d33wubrfki0l68.cloudfront.net/2f3acb83b7d2349f2194bc38c0f22f295908dc33/6a6e6/zh/img/pnpm-no-name-with-frame.svg">
-                    <span class="svelte-1kgta4e">pnpm</span>
+
+                    <span class="wrap">pnpm</span>
                 </a>
-                <a target="_blank" href="https://www.babeljs.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.babeljs.cn/img/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.babeljs.cn/img/favicon.png"> <span class="svelte-1kgta4e">babel</span>
-                </a><a target="_blank" href="https://www.rollupjs.com/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.rollupjs.com/img/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.rollupjs.com/img/favicon.png"> <span class="svelte-1kgta4e">rollup</span>
-                </a><a target="_blank" href="https://www.webpackjs.com/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.webpackjs.com/assets/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.webpackjs.com/assets/favicon.ico"> <span class="svelte-1kgta4e">webpack</span>
+                <a target="_blank" href="https://www.babeljs.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.babeljs.cn/img/favicon.png" alt="" class="wrap"
+                        src="https://www.babeljs.cn/img/favicon.png">
+                    <span class="wrap">babel</span>
+                </a><a target="_blank" href="https://www.rollupjs.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.rollupjs.com/img/favicon.png" alt="" class="wrap"
+                        src="https://www.rollupjs.com/img/favicon.png">
+                    <span class="wrap">rollup</span>
+                </a><a target="_blank" href="https://www.webpackjs.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.webpackjs.com/assets/favicon.ico" alt="" class="wrap"
+                        src="https://www.webpackjs.com/assets/favicon.ico">
+                    <span class="wrap">webpack</span>
                 </a>
-                <a target="_blank" href="https://www.gulpjs.com.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.gulpjs.com.cn/img/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://www.gulpjs.com.cn/img/favicon.png"> <span class="svelte-1kgta4e">gulp</span>
-                </a><a target="_blank" href="https://vitejs.cn/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vitejs.cn/logo.svg" alt="" class="svelte-1kgta4e"
-                        src="https://vitejs.cn/logo.svg"> <span class="svelte-1kgta4e">vite</span>
+                <a target="_blank" href="https://www.gulpjs.com.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.gulpjs.com.cn/img/favicon.png" alt="" class="wrap"
+                        src="https://www.gulpjs.com.cn/img/favicon.png">
+                    <span class="wrap">gulp</span>
+                </a><a target="_blank" href="https://vitejs.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://vitejs.cn/logo.svg" alt="" class="wrap" src="https://vitejs.cn/logo.svg">
+                    <span class="wrap">vite</span>
                 </a>
-                <a target="_blank" href="https://codepen.io/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://codepen.io/" class="item-link text-overflow wrap">
+                    <img data-src="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"
+                        alt="" class="wrap"
                         src="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-                    <span class="svelte-1kgta4e">CodePen</span>
+
+                    <span class="wrap">CodePen</span>
                 </a>
-                <a target="_blank" href="https://parceljs.org/" class="item-link text-overflow svelte-1kgta4e"
-                    title="零配置构建工具"><img data-src="https://parceljs.org/favicon.fe6f9d11.ico" alt=""
-                        class="svelte-1kgta4e" src="https://parceljs.org/favicon.fe6f9d11.ico"> <span
-                        class="svelte-1kgta4e">parcel</span>
+                <a target="_blank" href="https://parceljs.org/" class="item-link text-overflow wrap" title="零配置构建工具">
+                    <img data-src="https://parceljs.org/favicon.fe6f9d11.ico" alt="" class="wrap"
+                        src="https://parceljs.org/favicon.fe6f9d11.ico">
+                    <span class="wrap">parcel</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="svgTool">
-            <h3 class="svelte-1kgta4e">svg工具</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://c.runoob.com/more/svgeditor/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://c.runoob.com/more/svgeditor/images/favicon.svg" alt="" class="svelte-1kgta4e"
-                        src="https://c.runoob.com/more/svgeditor/images/favicon.svg"> <span class="svelte-1kgta4e">SVG
+        <div class="list wrap" id="svgTool">
+            <h3 class="wrap">svg工具</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://c.runoob.com/more/svgeditor/" class="item-link text-overflow wrap">
+                    <img data-src="https://c.runoob.com/more/svgeditor/images/favicon.svg" alt="" class="wrap"
+                        src="https://c.runoob.com/more/svgeditor/images/favicon.svg">
+                    <span class="wrap">SVG
                         编辑器</span>
                 </a>
-                <a target="_blank" href="https://getwaves.io/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://getwaves.io/favicon-32x32.png?v=f13a1a2e88a9720e746d5561039d3f5f" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://getwaves.io/favicon-32x32.png?v=f13a1a2e88a9720e746d5561039d3f5f"> <span
-                        class="svelte-1kgta4e">SVG 波浪线</span>
+                <a target="_blank" href="https://getwaves.io/" class="item-link text-overflow wrap">
+                    <img data-src="https://getwaves.io/favicon-32x32.png?v=f13a1a2e88a9720e746d5561039d3f5f" alt=""
+                        class="wrap" src="https://getwaves.io/favicon-32x32.png?v=f13a1a2e88a9720e746d5561039d3f5f">
+                    <span class="wrap">SVG 波浪线</span>
                 </a>
-                <a target="_blank" href="https://undraw.co/illustrations"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://undraw.co/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://undraw.co/favicon.ico"> <span
-                        class="svelte-1kgta4e">unDraw</span>
-                </a><a target="_blank" href="https://www.shapedivider.app/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.shapedivider.app/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.shapedivider.app/favicon.ico"> <span class="svelte-1kgta4e">Shape
+                <a target="_blank" href="https://undraw.co/illustrations" class="item-link text-overflow wrap">
+                    <img data-src="https://undraw.co/favicon.ico" alt="" class="wrap"
+                        src="https://undraw.co/favicon.ico">
+                    <span class="wrap">unDraw</span>
+                </a><a target="_blank" href="https://www.shapedivider.app/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.shapedivider.app/favicon.ico" alt="" class="wrap"
+                        src="https://www.shapedivider.app/favicon.ico">
+                    <span class="wrap">Shape
                         Dividers</span>
                 </a>
                 <a target="_blank" href="https://iradesign.io/gallery/illustrations"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/7071a630-33c2-4ca0-bb77-9c7a7868a7a9.png"
-                        alt="" class="svelte-1kgta4e"
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/7071a630-33c2-4ca0-bb77-9c7a7868a7a9.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/7071a630-33c2-4ca0-bb77-9c7a7868a7a9.png">
-                    <span class="svelte-1kgta4e">IRA Design</span>
+
+                    <span class="wrap">IRA Design</span>
                 </a>
                 <a target="_blank" href="https://delesign.com/free-designs/graphics/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://delesign.com/public/images/favicon-ico.png" alt="" class="svelte-1kgta4e"
-                        src="https://delesign.com/public/images/favicon-ico.png"> <span class="svelte-1kgta4e">Free
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://delesign.com/public/images/favicon-ico.png" alt="" class="wrap"
+                        src="https://delesign.com/public/images/favicon-ico.png">
+                    <span class="wrap">Free
                         Designs</span>
                 </a>
                 <a target="_blank"
                     href="https://datav.aliyun.com/portal/school/atlas/area_selector?spm=a2crr.b71357980.0.0.15cd26c0dUO9va"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://datav.aliyun.com/favicon.ico"
-                        alt="" class="svelte-1kgta4e" src="https://datav.aliyun.com/favicon.ico"> <span
-                        class="svelte-1kgta4e">地理小工具</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://datav.aliyun.com/favicon.ico" alt="" class="wrap"
+                        src="https://datav.aliyun.com/favicon.ico">
+                    <span class="wrap">地理小工具</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="cssTool">
-            <h3 class="svelte-1kgta4e">css工具</h3>
-            <div class="list-item svelte-1kgta4e">
+        <div class="list wrap" id="cssTool">
+            <h3 class="wrap">css工具</h3>
+            <div class="list-item wrap">
                 <a target="_blank" href="https://cubic-bezier.com/#.17,.67,.83,.67"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/5e1ccfea-7b86-4631-a2a3-1c8eba715c20.png"
-                        alt="" class="svelte-1kgta4e"
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/5e1ccfea-7b86-4631-a2a3-1c8eba715c20.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/5e1ccfea-7b86-4631-a2a3-1c8eba715c20.png">
-                    <span class="svelte-1kgta4e">贝塞尔曲线</span>
+
+                    <span class="wrap">贝塞尔曲线</span>
                 </a>
-                <a target="_blank" href="https://animista.net/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://animista.net/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://animista.net/favicon.ico"> <span class="svelte-1kgta4e">css
+                <a target="_blank" href="https://animista.net/" class="item-link text-overflow wrap">
+                    <img data-src="https://animista.net/favicon.ico" alt="" class="wrap"
+                        src="https://animista.net/favicon.ico">
+                    <span class="wrap">css
                         动画</span>
                 </a>
-                <a target="_blank" href="https://cssgradient.io/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://cssgradient.io/images/favicon-23859487.png" alt="" class="svelte-1kgta4e"
-                        src="https://cssgradient.io/images/favicon-23859487.png"> <span class="svelte-1kgta4e">css
+                <a target="_blank" href="https://cssgradient.io/" class="item-link text-overflow wrap">
+                    <img data-src="https://cssgradient.io/images/favicon-23859487.png" alt="" class="wrap"
+                        src="https://cssgradient.io/images/favicon-23859487.png">
+                    <span class="wrap">css
                         渐变色</span>
                 </a>
-                <a target="_blank" href="https://shadows.brumm.af/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://shadows.brumm.af/favicon.svg" alt="" class="svelte-1kgta4e"
-                        src="https://shadows.brumm.af/favicon.svg"> <span class="svelte-1kgta4e">css 平滑阴影</span>
+                <a target="_blank" href="https://shadows.brumm.af/" class="item-link text-overflow wrap">
+                    <img data-src="https://shadows.brumm.af/favicon.svg" alt="" class="wrap"
+                        src="https://shadows.brumm.af/favicon.svg">
+                    <span class="wrap">css 平滑阴影</span>
                 </a>
-                <a target="_blank" href="https://bennettfeely.com/clippy/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://bennettfeely.com/clippy/pics/favicon.png" alt="" class="svelte-1kgta4e"
-                        src="https://bennettfeely.com/clippy/pics/favicon.png"> <span class="svelte-1kgta4e">css
+                <a target="_blank" href="https://bennettfeely.com/clippy/" class="item-link text-overflow wrap">
+                    <img data-src="https://bennettfeely.com/clippy/pics/favicon.png" alt="" class="wrap"
+                        src="https://bennettfeely.com/clippy/pics/favicon.png">
+                    <span class="wrap">css
                         图片剪辑</span>
                 </a>
-                <a target="_blank" href="https://cssgrid-generator.netlify.app/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://cssgrid-generator.netlify.app/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://cssgrid-generator.netlify.app/favicon.ico"> <span class="svelte-1kgta4e">css
+                <a target="_blank" href="https://cssgrid-generator.netlify.app/" class="item-link text-overflow wrap">
+                    <img data-src="https://cssgrid-generator.netlify.app/favicon.ico" alt="" class="wrap"
+                        src="https://cssgrid-generator.netlify.app/favicon.ico">
+                    <span class="wrap">css
                         Grid</span>
                 </a>
-                <a target="_blank" href="https://ui.glass/generator/" class="item-link text-overflow svelte-1kgta4e"
-                    title="自定义毛玻璃"><img data-src="https://ui.glass/generator/favicon-32x32.png" alt=""
-                        class="svelte-1kgta4e" src="https://ui.glass/generator/favicon-32x32.png"> <span
-                        class="svelte-1kgta4e">Glass
+                <a target="_blank" href="https://ui.glass/generator/" class="item-link text-overflow wrap"
+                    title="自定义毛玻璃">
+                    <img data-src="https://ui.glass/generator/favicon-32x32.png" alt="" class="wrap"
+                        src="https://ui.glass/generator/favicon-32x32.png">
+                    <span class="wrap">Glass
                         UI</span>
                 </a>
-                <a target="_blank" href="https://animxyz.com/" class="item-link text-overflow svelte-1kgta4e"
-                    title="自定义和组合复杂的动画"><img
-                        data-src="https://animxyz.com/assets/static/animxyz-logo.ce0531f.39f3bde368e480505b70778acaa2ac74.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://animxyz.com/" class="item-link text-overflow wrap" title="自定义和组合复杂的动画">
+                    <img data-src="https://animxyz.com/assets/static/animxyz-logo.ce0531f.39f3bde368e480505b70778acaa2ac74.png"
+                        alt="" class="wrap"
                         src="https://animxyz.com/assets/static/animxyz-logo.ce0531f.39f3bde368e480505b70778acaa2ac74.png">
-                    <span class="svelte-1kgta4e">animxyz</span>
+
+                    <span class="wrap">animxyz</span>
                 </a>
-                <a target="_blank" href="https://whirl.netlify.app/" class="item-link text-overflow svelte-1kgta4e"
-                    title="CSS 加载动画"><img data-src="https://whirl.netlify.app/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://whirl.netlify.app/favicon.ico"> <span class="svelte-1kgta4e">whirl</span>
+                <a target="_blank" href="https://whirl.netlify.app/" class="item-link text-overflow wrap"
+                    title="CSS 加载动画">
+                    <img data-src="https://whirl.netlify.app/favicon.ico" alt="" class="wrap"
+                        src="https://whirl.netlify.app/favicon.ico">
+                    <span class="wrap">whirl</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="tool">
-            <h3 class="svelte-1kgta4e">工具</h3>
-            <div class="list-item svelte-1kgta4e">
-                <a target="_blank" href="https://cli.im/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://static.clewm.net/static/images/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://static.clewm.net/static/images/favicon.ico"> <span
-                        class="svelte-1kgta4e">草料二维码</span>
+        <div class="list wrap" id="tool">
+            <h3 class="wrap">工具</h3>
+            <div class="list-item wrap">
+                <a target="_blank" href="https://cli.im/" class="item-link text-overflow wrap">
+                    <img data-src="https://static.clewm.net/static/images/favicon.ico" alt="" class="wrap"
+                        src="https://static.clewm.net/static/images/favicon.ico">
+                    <span class="wrap">草料二维码</span>
                 </a>
-                <a target="_blank" href="https://tinypng.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://tinypng.com/images/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://tinypng.com/images/favicon.ico"> <span class="svelte-1kgta4e">图片压缩</span>
-                </a><a target="_blank" href="https://fanyi.baidu.com/"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://fanyi-cdn.cdn.bcebos.com/static/translation/img/favicon/favicon-32x32_ca689c3.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://tinify.cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://tinypng.com/images/favicon.ico" alt="" class="wrap"
+                        src="https://tinypng.com/images/favicon.ico">
+                    <span class="wrap">图片压缩</span>
+                </a><a target="_blank" href="https://fanyi.baidu.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://fanyi-cdn.cdn.bcebos.com/static/translation/img/favicon/favicon-32x32_ca689c3.png"
+                        alt="" class="wrap"
                         src="https://fanyi-cdn.cdn.bcebos.com/static/translation/img/favicon/favicon-32x32_ca689c3.png">
-                    <span class="svelte-1kgta4e">百度翻译</span>
+
+                    <span class="wrap">百度翻译</span>
                 </a>
-                <a target="_blank" href="https://lanhuapp.com/web/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://lhcdn.lanhuapp.com/web/static/favicon.ico?v=2" alt="" class="svelte-1kgta4e"
-                        src="https://lhcdn.lanhuapp.com/web/static/favicon.ico?v=2"> <span
-                        class="svelte-1kgta4e">蓝湖</span>
+                <a target="_blank" href="https://lanhuapp.com/web/" class="item-link text-overflow wrap">
+                    <img data-src="https://lhcdn.lanhuapp.com/web/static/favicon.ico?v=2" alt="" class="wrap"
+                        src="https://lhcdn.lanhuapp.com/web/static/favicon.ico?v=2">
+                    <span class="wrap">蓝湖</span>
                 </a>
-                <a target="_blank" href="https://www.aconvert.com/cn/"
-                    class="item-link text-overflow svelte-1kgta4e"><img data-src="https://www.aconvert.com/favicon.ico"
-                        alt="" class="svelte-1kgta4e" src="https://www.aconvert.com/favicon.ico"> <span
-                        class="svelte-1kgta4e">格式转换</span>
+                <a target="_blank" href="https://www.aconvert.com/cn/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.aconvert.com/favicon.ico" alt="" class="wrap"
+                        src="https://www.aconvert.com/favicon.ico">
+                    <span class="wrap">格式转换</span>
                 </a>
                 <a target="_blank" href="https://www.toptal.com/developers/css/sprite-generator"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.toptal.com/developers/css/sprite-generator/static/images/favicon.png"
-                        alt="" class="svelte-1kgta4e"
-                        src="https://www.toptal.com/developers/css/sprite-generator/static/images/favicon.png"> <span
-                        class="svelte-1kgta4e">生成精灵图</span>
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://www.toptal.com/developers/css/sprite-generator/static/images/favicon.png"
+                        alt="" class="wrap"
+                        src="https://www.toptal.com/developers/css/sprite-generator/static/images/favicon.png">
+                    <span class="wrap">生成精灵图</span>
                 </a>
-                <a target="_blank" href="https://www.m3u8.tv/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.m3u8.tv/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.m3u8.tv/favicon.ico"> <span class="svelte-1kgta4e">m3u8</span>
+                <a target="_blank" href="https://www.m3u8.tv/" class="item-link text-overflow wrap">
+                    <img data-src="https://www.m3u8.tv/favicon.ico" alt="" class="wrap"
+                        src="https://www.m3u8.tv/favicon.ico">
+                    <span class="wrap">m3u8</span>
                 </a>
-                <a target="_blank" href="https://ps.gaoding.com/#/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://ps.gaoding.com/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://ps.gaoding.com/favicon.ico"> <span class="svelte-1kgta4e">在线ps</span>
+                <a target="_blank" href="https://ps.gaoding.com/#/" class="item-link text-overflow wrap">
+                    <img data-src="https://ps.gaoding.com/favicon.ico" alt="" class="wrap"
+                        src="https://ps.gaoding.com/favicon.ico">
+                    <span class="wrap">在线ps</span>
                 </a>
-                <a target="_blank" href="https://www.pixilart.com/draw"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.pixilart.com/images/favicon/favicon-32x32.png?v=jw6qNMPWz4" alt=""
-                        class="svelte-1kgta4e"
-                        src="https://www.pixilart.com/images/favicon/favicon-32x32.png?v=jw6qNMPWz4">
-                    <span class="svelte-1kgta4e">像素风设计</span>
+                <a target="_blank" href="https://www.pixilart.com/draw" class="item-link text-overflow wrap">
+                    <img data-src="https://www.pixilart.com/images/favicon/favicon-32x32.png?v=jw6qNMPWz4" alt=""
+                        class="wrap" src="https://www.pixilart.com/images/favicon/favicon-32x32.png?v=jw6qNMPWz4">
+
+                    <span class="wrap">像素风设计</span>
                 </a>
-                <a target="_blank" href="https://tool.lu/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://tool.lu/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://tool.lu/favicon.ico"> <span class="svelte-1kgta4e">在线工具</span>
+                <a target="_blank" href="https://tool.lu/" class="item-link text-overflow wrap">
+                    <img data-src="https://tool.lu/favicon.ico" alt="" class="wrap" src="https://tool.lu/favicon.ico">
+                    <span class="wrap">在线工具</span>
                 </a>
-                <a target="_blank" href="https://ikuuu.ltd/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/49b9e324-ad76-4539-ba82-e10e1fbc4577.png"
-                        alt="" class="svelte-1kgta4e"
+                <a target="_blank" href="https://ikuuu.ltd/" class="item-link text-overflow wrap">
+                    <img data-src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/49b9e324-ad76-4539-ba82-e10e1fbc4577.png"
+                        alt="" class="wrap"
                         src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-39734fbc-b241-4d89-ad87-0befd655e266/49b9e324-ad76-4539-ba82-e10e1fbc4577.png">
-                    <span class="svelte-1kgta4e">ikuuu-vpn</span>
+
+                    <span class="wrap">ikuuu-vpn</span>
                 </a>
                 <a target="_blank" href="https://www.baidufe.com/fehelper/index/index.html"
-                    class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://www.baidufe.com/fehelper/static/img/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://www.baidufe.com/fehelper/static/img/favicon.ico"> <span
-                        class="svelte-1kgta4e">Web助手
+                    class="item-link text-overflow wrap">
+                    <img data-src="https://www.baidufe.com/fehelper/static/img/favicon.ico" alt="" class="wrap"
+                        src="https://www.baidufe.com/fehelper/static/img/favicon.ico">
+                    <span class="wrap">Web助手
                         FeHelper</span>
                 </a>
-                <a target="_blank" href="https://www.aigei.com/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://cdn-sqn.aigei.com/assets/site/img/icon/favicon.ico" alt=""
-                        class="svelte-1kgta4e" src="https://cdn-sqn.aigei.com/assets/site/img/icon/favicon.ico"> <span
-                        class="svelte-1kgta4e">爱给</span>
+                <a target="_blank" href="https://www.aigei.com/" class="item-link text-overflow wrap">
+                    <img data-src="https://cdn-sqn.aigei.com/assets/site/img/icon/favicon.ico" alt="" class="wrap"
+                        src="https://cdn-sqn.aigei.com/assets/site/img/icon/favicon.ico">
+                    <span class="wrap">爱给</span>
                 </a>
-                <a target="_blank" href="https://wallhaven.cc/" class="item-link text-overflow svelte-1kgta4e"><img
-                        data-src="https://wallhaven.cc/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://wallhaven.cc/favicon.ico"> <span class="svelte-1kgta4e">WallHaven</span>
+                <a target="_blank" href="https://wallhaven.cc/" class="item-link text-overflow wrap">
+                    <img data-src="https://wallhaven.cc/favicon.ico" alt="" class="wrap"
+                        src="https://wallhaven.cc/favicon.ico">
+                    <span class="wrap">WallHaven</span>
                 </a>
-                <a target="_blank" href="https://jsbench.me/" class="item-link text-overflow svelte-1kgta4e"
-                    title="javaScript 的性能基准测试平台"><img data-src="https://jsbench.me/assets/icons/favicon-32x32.png"
-                        alt="" class="svelte-1kgta4e" src="https://jsbench.me/assets/icons/favicon-32x32.png"> <span
-                        class="svelte-1kgta4e">JSBench</span>
+                <a target="_blank" href="https://jsbench.me/" class="item-link text-overflow wrap"
+                    title="javaScript 的性能基准测试平台">
+                    <img data-src="https://jsbench.me/assets/icons/favicon-32x32.png" alt="" class="wrap"
+                        src="https://jsbench.me/assets/icons/favicon-32x32.png">
+                    <span class="wrap">JSBench</span>
                 </a>
-                <a target="_blank" href="https://jex.im/regulex" class="item-link text-overflow svelte-1kgta4e"
-                    title="在线正则表达式可视化"><img data-src="https://jex.im/favicon.ico" alt="" class="svelte-1kgta4e"
-                        src="https://jex.im/favicon.ico"> <span class="svelte-1kgta4e">Regulex</span>
+                <a target="_blank" href="https://jex.im/regulex" class="item-link text-overflow wrap"
+                    title="在线正则表达式可视化">
+                    <img data-src="https://jex.im/favicon.ico" alt="" class="wrap" src="https://jex.im/favicon.ico">
+                    <span class="wrap">Regulex</span>
                 </a>
             </div>
         </div>
-        <div class="list svelte-1kgta4e" id="vscode">
-            <h3 class="svelte-1kgta4e">vscode插件</h3>
-            <div class="list-item svelte-1kgta4e">
+        <div class="list wrap" id="vscode">
+            <h3 class="wrap">vscode插件</h3>
+            <div class="list-item wrap">
                 <a target="_blank"
                     href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode"
-                    class="item-link text-overflow svelte-1kgta4e">
+                    class="item-link text-overflow wrap">
+
                     <img data-src="https://visualstudioexptteam.gallerycdn.vsassets.io/extensions/visualstudioexptteam/vscodeintellicode/1.2.22/1656630439318/Microsoft.VisualStudio.Services.Icons.Default"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://visualstudioexptteam.gallerycdn.vsassets.io/extensions/visualstudioexptteam/vscodeintellicode/1.2.22/1656630439318/Microsoft.VisualStudio.Services.Icons.Default">
-                    <span class="svelte-1kgta4e">IntelliCode</span>
+
+                    <span class="wrap">IntelliCode</span>
                 </a>
                 <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow"
-                    class="item-link text-overflow svelte-1kgta4e">
+                    class="item-link text-overflow wrap">
+
                     <img data-src="https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/8.3.1/1649543509070/Microsoft.VisualStudio.Services.Icons.Default"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/8.3.1/1649543509070/Microsoft.VisualStudio.Services.Icons.Default">
-                    <span class="svelte-1kgta4e">indent-rainbow</span>
+
+                    <span class="wrap">indent-rainbow</span>
                 </a>
                 <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets"
-                    class="item-link text-overflow svelte-1kgta4e" title="vue 语法提醒">
-                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="svelte-1kgta4e"
+                    class="item-link text-overflow wrap" title="vue 语法提醒">
+
+                    <img data-src="https://cn.vuejs.org/logo.svg" alt="" class="wrap"
                         src="https://cn.vuejs.org/logo.svg">
-                    <span class="svelte-1kgta4e">Vue 3 Snippets</span>
+
+                    <span class="wrap">Vue 3 Snippets</span>
                 </a>
                 <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=chendm.translate"
-                    class="item-link text-overflow svelte-1kgta4e">
+                    class="item-link text-overflow wrap">
+
                     <img data-src="https://fanyi-cdn.cdn.bcebos.com/static/translation/img/favicon/favicon-32x32_ca689c3.png"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://fanyi-cdn.cdn.bcebos.com/static/translation/img/favicon/favicon-32x32_ca689c3.png">
-                    <span class="svelte-1kgta4e">translateNamed</span>
+
+                    <span class="wrap">translateNamed</span>
                 </a>
                 <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser"
-                    class="item-link text-overflow svelte-1kgta4e" title="打开默认浏览器">
+                    class="item-link text-overflow wrap" title="打开默认浏览器">
+
                     <img data-src="https://techer.gallerycdn.vsassets.io/extensions/techer/open-in-browser/2.0.0/1534049617896/Microsoft.VisualStudio.Services.Icons.Default"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://techer.gallerycdn.vsassets.io/extensions/techer/open-in-browser/2.0.0/1534049617896/Microsoft.VisualStudio.Services.Icons.Default">
-                    <span class="svelte-1kgta4e">open in browser</span>
+
+                    <span class="wrap">open in browser</span>
                 </a>
                 <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
-                    class="item-link text-overflow svelte-1kgta4e">
+                    class="item-link text-overflow wrap">
+
                     <img data-src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.5/1646738284779/Microsoft.VisualStudio.Services.Icons.Default"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.5/1646738284779/Microsoft.VisualStudio.Services.Icons.Default">
-                    <span class="svelte-1kgta4e">Live Server</span>
+
+                    <span class="wrap">Live Server</span>
                 </a>
                 <a target="_blank"
                     href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense"
-                    class="item-link text-overflow svelte-1kgta4e">
+                    class="item-link text-overflow wrap">
+
                     <img data-src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.8.1/1654770568656/Microsoft.VisualStudio.Services.Icons.Default"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.8.1/1654770568656/Microsoft.VisualStudio.Services.Icons.Default">
-                    <span class="svelte-1kgta4e">Path Intellisense</span>
+
+                    <span class="wrap">Path Intellisense</span>
                 </a>
                 <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner"
-                    class="item-link text-overflow svelte-1kgta4e">
+                    class="item-link text-overflow wrap">
+
                     <img data-src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/code-runner/0.11.8/1654961830194/Microsoft.VisualStudio.Services.Icons.Default"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/code-runner/0.11.8/1654961830194/Microsoft.VisualStudio.Services.Icons.Default">
-                    <span class="svelte-1kgta4e">Code Runner</span>
+
+                    <span class="wrap">Code Runner</span>
                 </a>
                 <a target="_blank"
                     href="https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview"
-                    class="item-link text-overflow svelte-1kgta4e">
+                    class="item-link text-overflow wrap">
+
                     <img data-src="https://kisstkondoros.gallerycdn.vsassets.io/extensions/kisstkondoros/vscode-gutter-preview/0.30.0/1644076638771/Microsoft.VisualStudio.Services.Icons.Default"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://kisstkondoros.gallerycdn.vsassets.io/extensions/kisstkondoros/vscode-gutter-preview/0.30.0/1644076638771/Microsoft.VisualStudio.Services.Icons.Default">
-                    <span class="svelte-1kgta4e">Image preview</span>
+
+                    <span class="wrap">Image preview</span>
                 </a>
                 <a target="_blank"
                     href="https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager"
-                    class="item-link text-overflow svelte-1kgta4e" title="多个项目切换">
+                    class="item-link text-overflow wrap" title="多个项目切换">
+
                     <img data-src="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/project-manager/12.6.0/1653251367800/Microsoft.VisualStudio.Services.Icons.Default"
-                        alt="" class="svelte-1kgta4e"
+                        alt="" class="wrap"
                         src="https://alefragnani.gallerycdn.vsassets.io/extensions/alefragnani/project-manager/12.6.0/1653251367800/Microsoft.VisualStudio.Services.Icons.Default">
-                    <span class="svelte-1kgta4e">Project Manager</span>
+
+                    <span class="wrap">Project Manager</span>
                 </a>
-                <a target="_blank"
-                    href="https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion"
-                    class="item-link text-overflow svelte-1kgta4e">
-                    <img data-src="https://zignd.gallerycdn.vsassets.io/extensions/zignd/html-css-class-completion/1.20.0/1608419199966/Microsoft.VisualStudio.Services.Icons.Default"
-                        alt="" class="svelte-1kgta4e"
-                        src="https://zignd.gallerycdn.vsassets.io/extensions/zignd/html-css-class-completion/1.20.0/1608419199966/Microsoft.VisualStudio.Services.Icons.Default">
-                    <span class="svelte-1kgta4e">IntelliSense for CSS class names in HTML</span>
-                </a>
+
             </div>
         </div>
-        <div title="侧边栏" class="fold svelte-1kgta4e" style="right: -34px;"><svg viewBox="0 0 16 16" fill="none"
-                xmlns="http://www.w3.org/2000/svg" class="svelte-1kgta4e" style="transform: rotate(0deg);">
-                <path
-                    d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z"
-                    fill="currentColor"></path>
-            </svg></div>
     </section>
 
 </body>
