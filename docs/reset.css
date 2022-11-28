@@ -1,0 +1,63 @@
+/**
+* 使用更直观的 box-sizing 模型
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/**
+ * 移除默认 margin
+ */
+* {
+    margin: 0;
+}
+
+/**
+ * 改进媒体默认设置
+ */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+/**
+ * 删除内置表单排版样式
+ */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/**
+ * 避免文字溢出
+ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+/**
+ * 创建根层叠上下文 
+ */
+.container {
+    isolation: isolate;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-size: 1.4rem;
+    -webkit-font-smoothing: antialiased;
+}
