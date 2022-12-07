@@ -1,11 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  ivy-ui: 1.0.0-beta.2
+  ivy-ui: 1.0.0-beta.3
   vite: ^3.2.4
 
 dependencies:
-  ivy-ui: 1.0.0-beta.2
+  ivy-ui: 1.0.0-beta.3
 
 devDependencies:
   vite: 3.2.4
@@ -282,8 +282,8 @@ packages:
       '@stencil/core': 2.19.3
     dev: false
 
-  /ivy-ui/1.0.0-beta.2:
-    resolution: {integrity: sha512-ILhDa/oYWhpe1HRSPZcunOkmAH4Ps+Ydto3TZe22x4NAvuLWuWS9NGWyZsXP7GBrmEr/cjcZcwcQCArciwHX6Q==}
+  /ivy-ui/1.0.0-beta.3:
+    resolution: {integrity: sha512-/Qvk/3oSwEdi0v4YxqKxuPw+KHOm5ysMNmFtLsuyPmTcqzgbdGC+O9KUku9T7sldMARTJvUwxrca6qUvOxPMYQ==}
     dependencies:
       '@popperjs/core': 2.11.6
       '@stencil/core': 2.19.3
